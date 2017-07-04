@@ -1,0 +1,550 @@
+% ****** Start of file apssamp.tex ******
+%
+%   This file is part of the APS files in the REVTeX 4.1 distribution.
+%   Version 4.1r of REVTeX, August 2010
+%
+%   Copyright (c) 2009, 2010 The American Physical Society.
+%
+%   See the REVTeX 4 README file for restrictions and more information.
+%
+% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
+% as well as the rest of the prerequisites for REVTeX 4.1
+%
+% See the REVTeX 4 README file
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex apssamp.tex
+%  2)  bibtex apssamp
+%  3)  latex apssamp.tex
+%  4)  latex apssamp.tex
+%
+\documentclass[%
+%reprint,                                   %%%%%%%%%%% this one makes it look like a paper
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+preprint,                                  %%%%%%%%%%%%%%%% this one for drafting
+%showpacs,preprintnumbers,
+nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lineno}
+\linenumbers % add line numbers, draft
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}% Include figure files                  \usepackage[draft]{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[printfigures]{figcaps} % send figures to end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{natbib} % allows author names in text, delete when finished?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+
+\begin{document}
+
+\newcommand{\wmk}{Wm$^{-1}$K$^{-1}$}
+
+%\preprint{APS/123-QED}
+
+\title{Finite size effects in simulations of thermal conductivity under lower mantle conditions}% Force line breaks with \\
+
+\author{Ben Todd}
+ \email{Corresponding  author: ee10bt@leeds.ac.uk}
+\author{Stephen Stackhouse}
+\author{Andrew M. Walker}
+\author{Jon E. Mound}
+
+\affiliation{School of Earth and Environment, University of Leeds, United Kingdom}
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{abstract}
+Knowledge of thermal conductivity is important for modelling the deep earth, but can not be measured experimentally at core mantle boundary conditions. Atomic scale simulations sidestep experimental limitations, but system size must be chosen carefully in order to determine accurate conductivity values.
+
+Here we investigate the effects of finite simulation size and show how conductivity can be overestimated when using the direct method. EXTRAPOLATION PROCEDURE
+
+Classical molecular dynamics approaches are utilised, with the intention of constraining system parameters for future ab-initio studies.
+
+RESULTS
+\end{abstract}
+
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\onecolumngrid % make one column, delete to go back to two IGNORE THIS, USE document class
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{\label{sec:intro}Introduction}
+
+\subsection{\label{sec:intro.intro}Intro Intro (remove this subsection header later)}
+
+A range of atomic scale simulation methods are available to determine the thermal conductivity of materials, which are invaluable in situations where experiments are difficult. An example of extreme conditions is the Earth\textsc{\char13}s lower mantle, where pressures and temperatures reach around 136~GPa and 4000~K above the core-mantle boundary (CMB). For many studies lowermost mantle thermal conductivity has been assumed to be 10~\wmk~(\citet{Lay2008}), but uncertainty in the extrapolation of low pressure and/or temperature experiments gives a range of 4~-~16 \wmk~(\citet{Brown1986, Osako1991, Hofmeister1999, Goncharov2009, Manthilake2011, Ohta2012}).
+
+%MENTION THEORETICAL CALCULATIONS HERE? TRYING TO MAKE UNCERTAINTY IN EXPERIMENTS OBVIOUS, GOING TO TALK ABOUT THEORETICAL RESULTS JUST FOR PURE BRIDG 
+ 
+%\textemdash
+
+%Thermal conductivity determines whether a material is a conductor or insulator of heat, both of which have many technological applications (such as in solar panels REF[that guy from Huddersfield/N8?]).
+
+%Thermal conductivity in the deep Earth influences dynamic processes such as mantle convection and heat loss from the core (\citet{Lay2008}). The value of thermal conductivity in the deep mantle is uncertain, because of the need to extrapolate experimental results (e.g. \citet{Hofmeister1999} OHTA MANTHILAKE?). For many studies lowermost mantle thermal conductivity has been assumed to be 10~\wmk (\citet{Lay2008}). More recent experiments (and theoretical calculations) have produced estimates of thermal conductivity close to the core mantle boundary (CMB) of 4~\textemdash~16 \wmk (\citet{Goncharov2009,Lay2008,Hofmeister1999,Brown1986}). ADD REFERENCES FOR THEORETICAL CALCULATIONS
+
+%The lower mantle encompasses the region between the mantle transition zone (660~km deep, $\sim$1900~K, $\sim$25~GPa) and the CMB(2891~km deep, $\sim$4000~K, $\sim$136~GPa). The composition of this region can be approximated as 80\% MgSiO$_3$/magnesium silicate perovskite (bridgmanite) and 20\% MgO/magnesium oxide (periclase)[not sure how to write mineral formulae/names], both of which are insulators and past their Debye temperatures at lower mantle conditions.
+
+\subsection{\label{sec:intro.pre}Pre-intro to methods (remove this subsection header later)}
+
+A review of different methods to compute thermal conductivity is given by \citet{Stackhouse2010}, in the present work we focus on two methods:
+(1) Equilibrium molecular dynamics utilising the Green-Kubo relations to determine the thermal conductivity from heat flux fluctuations and their time-dependence (\citet{Green1954,Kubo1957,Kubo1966,Schelling2002}). 
+(2) The ``direct method'' utilising non-equilbrium molecular dynamics, where the temperature gradient from an imposed heat flux is measured and related to the thermal conductivity via Fourier's Law [\citet{Muller-Plathe1997,Nieto-Draghi2013}]
+
+%The important common atomic scale methods are: 
+%(3) Anharmonic lattice dynamics. [\citet{Tang2009}] %(BTE)CHERNATYNSKIY and PHILLPOT 2010?
+%(4) Combined quasiharmonic lattice dynamics and molecular dynamics method [\citet{DeKoker2009}].
+
+\subsection{\label{sec:intro.question}The question/motivation (remove this subsection header later)}
+
+Considering systems of varying size, length-dependent conductivities are obtained from the direct method and extrapolated to the bulk material (\citet{Schelling2002}). The validity of this extrapolation procedure have been called into question (e.g. \citet{Sellan2010}), when a linear trend cannot be fit through the length-dependent conductivities. Herein we describe three finite-size effects (FSE) which cause the conductivity result of a simulation to diverge from the value expected by a linear trend, and offer a comparison with results obtained from the Green-Kubo method. THIS PARA MAY BE MORE IMPORTANT IN ABSTRACT
+
+
+
+
+\subsection{\label{sec:intro.brdg}Bridgmanite (remove this subsection header later)}
+
+Bridgmanite, or [MgSiO$_3$/magnesium silicate] perovskite, comprises around 80\% (75\%? REF?) of the lower mantle (need to mention the other 20\%?), and is an insulator past its Debye temperature at all conditions relevant to the deep earth (TRUE? REF?). There have been several computational studies to calculate the lattice thermal conductivity of bridgmanite at CMB conditions.  
+Our approach will be very similar to that of \citet{Ammann2014}, who use the direct method and interatomic potentials to produce a value of $\sim$8.5~\wmk. \citet{Stackhouse2015} again use the direct method but with density functional theory, yielding conductivity of 6.8~$\pm$~0.9~\wmk. Using Green-Kubo, \citet{Haigis2013} report a value of 12.4~$\pm$~2.0~\wmk for conditions of 3000~K, 139~GPa. \citet{Tang2014} and \citet{Dekura2013} employ first principles, anharmonic lattice dynamics techniques, respectively obtaining values of $\sim$1~\wmk (CMB conditions) and 2.3~\wmk (for 4000~K and 100~GPa).
+
+
+
+
+
+
+
+
+%BEGIN COPY/PASTE FROM TRANSFER REPORT
+
+%\citet{Osako1991} measured the lattice thermal conductivity of MgSiO$_3$ perovskite, using a modified \AA ngstrom method. They investigated a temperature range of 160 - 340~K at ambient pressure. At 300~K, a conductivity of 5.1~\wmk was obtained. This value is similar to that reported for chemical and structural analogues, MgSiO$_3$ enstatite (5.0~\wmk REF) and CaTiO$_{3}$ perovskite (4~\wmk REF). The authors extrapolated the value to mantle conditions, neglecting radiative thermal conductivity. They predicted a value of 3.0~\wmk just beneath the mantle transition zone at 1900~K, and 12.0~\wmk at the top of the D$^{\prime \prime}$ layer at 2500~K, a four-fold increase. 
+%Thermal conductivity is highlighted as an important indictor of lowermost mantle structure, whether or not the D$^{\prime \prime}$ layer can behave as a thermal boundary between core and mantle. [not needed JM 150327]
+
+%\par \citet{Manthilake2011} measured MgSiO$_3$ perovskite at 26~GPa and 473~-~1073~K, and periclase at 8 and 14~GPa between 373~-~1273~K. In order to estimate values of thermal conductivity at the top and bottom of D$^{\prime \prime}$ for a lower mantle compositional model of 4~perovskite~:~1~periclase, the authors extrapolated their measurements to high temperature and pressure. For an iron-free mantle, thermal conductivities of 18.9~$\pm$~1.6~\wmk and 15.4~$\pm$~1.4~\wmk are estimated for the top of D$^{\prime \prime}$ and CMB respectively. Similarly, for a mantle composition with Fe, thermal conductivities of 9.1~$\pm$~1.2~\wmk and 8.4~$\pm$~1.2~\wmk are calculated. This highlights the importance of impurities in controlling thermal conductivity in the lower mantle.
+
+%\par \citet{Ohta2012} measured the lattice thermal diffusivity of MgSiO$_3$ perovskite and post-perovskite at room temperature and pressures up to 144~GPa (using a diamond-anvil cell (DAC) and light heating thermoreflectance). These results suggest a perovskite-dominant lowermost mantle would have conducitivity of around 11~\wmk, and that parts of the lowermost mantle where post-perovskite is stable will have a conductivity approximately 60\% higher. The authors suggest that these differences in conductivity between phases will not have a large effect on CMB heat flux, assuming the double-crossing perovskite phase model. %The lattice conductivity of \perovs perovskite is shown to increase with pressure and decrease with temperature as expected. The inclusion of impurities is expected to decrease lattice thermal conductivity.
+
+%MANTHILAKE'S HIGH T RESULTS? CAN'T FIND REFERENCE?
+
+%END COPY/PASTE FROM TRANSFER REPORT
+
+
+
+
+
+
+
+\subsection{\label{sec:intro.end}Intro to rest of paper (remove this subsection header later)}
+
+
+(CHANGE THIS PARA) 
+In section \ref{sec:theory} we explain how the methods work and expand on issues.
+In section \ref{sec:methodology} we outline our computational approaches, for the non-equilibrium molecular dynamics direct method and equilibrium molecular dynamics Green-Kubo method. The two methods have previously been compared (e.g. \citet{Schelling2002}), and have been found to give results in good agreement. 
+In section \ref{sec:results} we show convergence of computed conductivity with respect to simulation cell size and shape (AND PRESSURE/TEMPERATURE CONDITION?). 
+In section \ref{sec:summary} we suggest the minimum system parameters to be utilised in similar lower mantle studies, and discuss potential future work. ALSO IN IV, DISCUSS SCALING LAW / THEORETICAL MODEL?
+(CHANGE THIS PARA) 
+
+
+
+
+
+\section{\label{sec:theory}Theory}
+
+\subsection{\label{sec:intro.phon}Phonons (remove this subsection header later???)}
+
+PHYSICS JOURNAL LEVEL? 
+On the atomic scale heat is (CAN BE?) transported as lattice virbrations, or phonons (MENTION RADIATIVE/ELECTRICAL? MENTION HOW WE DON'T CARE ABOUT EITHER FOR BRIDG HERE?). The further phonons travel before scattering (mean free path, MFP) the more efficient the heat transport, and thus the higher the thermal condutivity. A number of effects (MATTHIESSEN'S RULE) cause phonons to scatter: (1) collisions with other phonons in the lattice, (2) boundaries or defects in the material, and (3) impurities in the atomic structure (ALSO ELECTRONS?). The finite-size effects we describe are associated with (1), where simulation system sizes are too small to recreate the phonon-phonon scattering of the bulk material. The FSE observed for a material will change with thermal conductivity/phonon MFP, and thus are pressure, temperature, and composition sensitive. Higher conductivity materials/conditions require larger systems to eliminate FSE (and vice versa) [[[BUT IS THIS TRUE? SHOULD IT BE IN THIS SECTION, OR DISCUSSION?]]]
+
+
+
+
+
+
+\subsection{\label{sec:intro.direct}Direct method (remove this subsection header later???)}
+
+The direct method is the computational implementation of a typical experiment to measure thermal conductivity, using Fourier\textsc{\char13}s law to relate heat flux (q) and temperature gradient ($\nabla{T}$) to thermal conductivity (k), 
+\begin{equation}
+q=-k \nabla{T} \label{fourier}.
+\end{equation}
+
+In the direct method energy is transferred from one group of atoms to another, creating hot and cold regions between which heat flows. The resultant temperature gradient is measured by calculating the temperature of individual groups of atoms along the direction of the heat flux. Simulation cells tend to be long relative to their cross-sectional area, defined as height by width. %(see Figure~\ref{fig:cell_dia}) 
+In this study (SHOULDN'T BE TALKING SPECIFIC AT THIS POINT?) cell boundaries are periodic and the hot and cold sections are half a cell apart, meaning heat flows out of both ends of the cell from hot to cold. This results in two similar temperature gradients which can be averaged.
+
+%\begin{figure}[h]
+%  \includegraphics[width=\linewidth]{images/cell_diagram.png}
+%  \caption{The unit cell represents the smallest box of atoms that can be replicated to produce a crystal structure. A supercell is an arrangement of unit cells.}
+%\label{fig:cell_dia}
+%\end{figure}
+
+%%\begin{figure}[h]
+%  \includegraphics[width=\linewidth]{images/ss_direct_mod.png}
+%  \caption{Movement and distribution of heat in the direct method. Orange to white scale represents temperature. Source: \citet{Stackhouse2015}.}
+%  \label{fig:ss_direct}
+%\end{figure}
+
+%%(Figure \ref{ss_direct})
+
+From kinetic theory REFERENCE, conductivities computed by the direct method ($k_L$) are dependent on length of simulation cell,
+\begin{equation}
+k_{L} = \frac{1}{3} C_{V} v l_{L} \label{length-dep},
+\end{equation}
+
+where $C_v$ is the volumetric heat capacity, $v$ is the BULK SOUND VELOCITY?, and $l_L$ is the phonon mean free path. The finite size of the simulation cell truncates the mean free path, underestimating conductivity compared to that of the bulk material ($k_\infty$). Using results from simulations of varying cell length ($L$), conductivity is extrapolated to a length-independent value (where $b$ is a material dependent parameter),
+
+\begin{equation}
+{k_{L}}^{-1} = b L^{-1} + {k_{\infty}}^{-1} \label{linear-extrap}.
+\end{equation}
+
+Inverse conductivities from direct method simulations are plotted against corresponding inverse cell lengths. A straight line is fit to the data and extrapolated to the y-axis (at which the inverse cell length equals zero and real length equals infinity), where the intercept gives the inverse of the bulk material conductivity, see Figure \ref{fig:ideal}(REFERENCE SCHELLING HERE?).
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/ideal_extrap.png}
+  \caption{Idealised example of linear extrapolation procedure. Inverse computed conductivities are plotted against inverse simulation lengths. Extrapolation to y-axis gives conductivity of an infinite system length, i.e. the bulk material.}
+  \label{fig:ideal}
+\end{figure}
+
+%Computational techniques are not limited by the reproduction of physical conditions like experiments, however they are affected by the size and shape of the simulation cell. The effects of the finite system size available for computation must be checked, as systems with too few atoms are sometimes unable to reproduce the behaviour of the bulk material. If the wavelength of a phonon is too long to fit into a cell, it is not able to transport heat like it should. In the case of the direct method, the length to cross sectional area (CSA) aspect ratio can also matter.
+
+Problems arise when the data don't support a linear trend. There are two effects of finite system size available that cause an individual direct method simulation to diverge away from the inferred linear trend, both of which resulting in overestimations of the length dependent conductivity. Firstly, when the distance between hot and cold sections is shorter than the MFP, phonons travel ballistically (i.e. without any scattering events) from heat source to sink (\citet{Sellan2010}). These overestimations occur to the right of the expected linear region on the inverse conductivity/length plots, reducing the gradient of the linear fit and underestimating the extrapolated conductivity.
+
+Secondly, for a fixed cross-sectional area, as cell length tends to infinity so does conductivity (\cite{Hu2011}). This effect is due to relatively sparse phonon phase sampling in the cross-section compared to length (PHONONS THAT AREN'T RESOLVED CAN'T CONTRIBUTE TO PHONON-PHONON SCATTERING), and can be observed on the inverse plot where long cells exhibit increasing conductivity away from the linear region. Unlike above, this divergence causes the gradient of a linear fit to increase and an overestimation to extrapolated conductivity. By comparing results with the Green-Kubo method, we will constrain the cell lengths in the linear extrapolation region to mitigate these effects. INCREASING CSA DOES NOT SUFFICIENTLY REDUCE THIS EFFECT
+
+A third effect of system size can cause an incorrect conductivity extrapolation, when the cross-sectional area is too small (\citet{Thomas2010}? NANOTUBE DIAMETER RATHER THAN CSA). The effect of phonon-phonon scattering is underestimated in small area systems due to a restriction of the active phonon modes. Reduced scattering means heat transport is artificially more efficient than expected from the bulk material. The general effect of this on the inverse conductivity/length plot is a systematic shift of data towards higher conductivities. We will investigate this effect by varying CSA for a range of cell lengths, extrapolated conductivity will decrease with CSA until it reaches a converged value. We will use the smallest area that produces the converged conductivity for computational efficiency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{\label{sec:intro.gk}Green-Kubo method (remove this subsection header later???)}
+
+Instantaneous heat fluxes can be used to determine how energy is dissipated within a system, where brief flux events mean heat is transferred quickly indicating high thermal conductivity (and vice versa). AW WANTS MORE WORDS HERE, MORE THAN WHAT IS BELOW?
+
+The Green-Kubo method uses auto-correlation functions (ACFs) to quantify time-dependence of heat fluxes (shown in Figure~\ref{fig:gk_acf}, and Equation \ref{acf-j}), in a simulation cell of roughly cubic dimensions and spatially-consistent average temperature. Auto-correlation is performed over the net heat flux series in each crystallographic direction, for a timescale up to a user-specified correlation length.
+
+\begin{equation}
+ACF_i = \left \langle J_i(0) \cdot  J_i(t) \right \rangle,
+\label{acf-j}
+\end{equation}
+%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/gk_acf.png}
+  \caption{Normalised ACF. Correlation is taken over a longer length than shown on this plot (10 ps, see Figure 8 below), however the function decays to less than 1\% of its initial value at 2~ps. It continues to oscillate about zero, with a positive average value.}
+  \label{fig:gk_acf}
+\end{figure}
+%%%%%%%%%%%%%%%%
+where $i$ specifies crystallographic axis, $J$ is heat flux, and $t$ is the correlation length. The integral of heat flux ACF is proportional to thermal conductivity via the Green-Kubo equation (see Figure~\ref{fig:gk_int} and Equation \ref{gk-int}), 
+
+\begin{equation}
+\kappa_i = \frac{V}{k_{B}T^2} \int_{0}^{\infty} \left \langle J_i(0) \cdot  J_i(t) \right \rangle dt ,
+\label{gk-int}
+\end{equation}
+%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/gk_int.png}
+  \caption{Integrated ACF, multiplied by constants to get thermal conductivity. Large variation in the first 1 ps corresponds to the correlation time where the ACF is unconverged (still decaying / large oscillations). Thermal conductivity is averaged from correlation time of 5~ps - 10~ps (region in red box).}
+  \label{fig:gk_int}
+\end{figure}
+%%%%%%%%%%%%%%%%
+where $V$ is the simulation cell volume, $k_B$ is the Boltzmann constant, and $T$ is the average temperature of the system. In this study we use Green-Kubo results as an independent check on the direct method, as they do not have the same finite size-effects. Obtaining a converged conductivity result simply depends on using a large enough cell volume / number of atoms. The bridgmanite unit cell we employ has a lattice parameter ratio (a:b:c) of roughly 1:1:1.4, meaning an approximately cubic simulation supercell should have dimensions 3x3x2, 4x4x3, 5x5x4, 6x6x4 etc. STACKHOUSE 2010 REFERENCES Volz and Chen 2000; Sun and Murthy 2006
+
+The individual integrals obtained from the Green-Kubo show variation from the mean on the order of \wmk. Many simulations from different intital temperature conditions are required in order to ensure good sampling of conductivity, as well as ensuring the computation time for each is long enough for convergence. This makes Green-Kubo a computationally expense method, especially for large systems.
+
+
+
+
+
+
+
+\section{\label{sec:methodology}Methodology}
+
+ENOUGH INFO FOR REPRODUCIBILITY !!!
+
+WHAT I HAVE DONE / FOR REPRODUCIBILITY. SETUP STUFF, BUT CONDUCTIVITY / FINITE SIZE EFFECT RESULTS GO IN RESULTS SECTION
+
+Using the classical molecular dynamics code LAMMPS(\citet{Plimpton1995}) (Large-scale Atomic/Molecular Massively Parallel Simulator), we calculate lattice thermal conductivities and constrain effects of finite simulation size. With the interatomic potential of \citet{Oganov2000} we simulate bridgmanite (MgSiO$_3$ perovskite), the predominant phase in the lower mantle ($\sim$75\%). 
+
+To assess the finite-size effects within bridgmanite, we use larger simulation cells than those employed in previous studies. The atom counts associated with these cells (the largest cell considered having over 100,000 atoms) means an ab initio study would be impractical, necessitating the use of interatomic potentials. We expect the potentials to represent the finite size effects well, even if computed conductivities may inaccurate compared to first-principles calculations. 
+
+We present the basic idea of the direct and Green-Kubo methods and show our calculations are converged with respect to simulation time, and in addition the method-specific system parameters. (REMOVE? The finite size effect analysis can be found in Section.~\ref{sec:results}, along with the comparison of both techniques' results.)
+
+
+
+
+\subsection{\label{sec:method.direct}Direct method}
+
+An important criterion for utilising the direct method is that the temperature gradient is sensible, too large a range between hot and cold sections means Fourier's law becomes invalid. 
+
+Additionally thermal conductivity is strongly temperature-dependent at upper lower-mantle conditions (1000~K), it is therefore undesirable to have substanially different conductivities as a of function of temperature across the cell. The opposite case is also true, the difference in temperature between hot and cold sections must be larger than the uncertainty in the average system temperature. 
+
+We typically observe fluctuations in temperature of around $\pm$50~K during temperature equilibration, and thus look for temperature ranges on the order of $\pm$100~K compared to the mean temperature. We control the magnitude of the gradient by altering the interval at which heat is exchanged. To produce the desired gradients we find shorter intervals are required as cell length decreases, cross-sectional area increases, and system equilibrium temperature decreases. 
+
+Figure \ref{fig:swap_int} (larger y-axis range?) shows conductivity as a function of swap interval for a 6x2x2 system at 136~GPa and 1000~K. Values are erratic for high interval / low temperature range swaps (right), and converge with decreasing swap interval (left). An interval around 10~timesteps produces suitable results for these system conditions, whilst exhibiting a sensible temperature range for the reasons mentioned above. 
+% the finite-distance approximation associated with molecular dynamics
+
+%This process is accelerated when heat is exchanged often, an important thing to check for when processing data.
+
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{images/swap_int.png}
+  \caption{ADD IN TEMPERATURE INFORMATION}
+  \label{fig:swap_int}
+\end{figure}
+
+We ensure all calculations are run for a sufficient length of time for the conductivity value to converge (see Figure \ref{fig:kappa_conv}). When conductivity fails to converge it means either the simulations needs to be run for longer (unlikely with our nanosecond-scale classical calculations), or the system temperature has drifted. When NVE simulations are run for a long time there is noticable drift in the average system temperature (due to  numerical approximations in the equation of motion), which in turn causes drift in the computed conductivity.
+
+
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{images/kappa_conv.png}
+  \caption{CAPTION}
+  \label{fig:kappa_conv}
+\end{figure}
+
+We consider FSE in the computed thermal conductivity at geophysically-relevant conditions of the CMB, but also consider the unphysical pressure/temperatures of 136~GPa and 1000~K. 
+MFP DEPENDENT FSE, PROVE DIFFERENCE. 
+BUT HAVEN'T DONE GK FSE AT 1000K!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{\label{sec:method.gk}Green-Kubo method}
+
+The bridgmanite unit cell does not have cell dimensions resembling a cube (a:b:c = 1:1:1.4), so we use supercell structures of 3x3x2, 4x4x3, 5x5x4, 6x6x4 etc. to make an approximately cubic simulation cell. Temperature initialisation of 1~ns is run to ensure convergence of system pressure and temperature. We choose a correlation length of 100~ps (WHICH IS WAY TOO LONG) to show convergence of the conductivity integral (and drift behaviour at long correlation time). 
+
+To obtain heat flux auto-correlation functions we run the simualtion for X~ns, repeated 10 times for each initial temperature condition,
+
+3x3x2 - 10 x 10ns runs, for each of 10 inital conditions - 1 microsecond total time
+
+4x4x3 - 10 x 10ns runs, for each of XX inital conditions - 2 microsecond total time
+
+5x5x4 - 10 x 5ns runs, for each of XX inital conditions - 1.5 microsecond total time 
+
+6x6x4 - 10 x 1ns runs, for each of XX initial conditions - 0.1 microsecond total time
+
+THIS INFO IN A TABLE, OR JUST GIVE FOR THE RELEVANT VOLUME?
+
+It is important that the total simulation time is long enough BECAUSE BELOW
+
+(SELLAN2010) Average over time and multiple simulations of different initial conditions. The total simulation time should be many times larger than the largest phonon relaxation times that dominate thermal conductivity, in order to accurately predict a converged value of the integral .
+
+ACFs are taken from all simulations and integrated seperately. A conductivity value is taken from each integral, all of which averaged for a final value with uncertainty (standard deviation of the mean). This process is performed for each crystallographic direction in each system volume. This allows the examination of anisotropy and finite system size effects.
+
+(show ACF oscillations / convergence to zero* [useful to show how how ACF convergence links with integral convergence])
+
+Conductivity values are obtained from each integral by averaging between correlation time of 2-10~ps. We show in Figure \ref{fig:acf_decay} that the magnitude of the ACF decays to much less than 1\% of its initial value around 1~ps, which should mean convergence of the integral and thus conductivity. %We stop averaging the integral after correlation time of 10~ps, despite having data for 100~ps. 
+
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{images/acf_decay_percent_correl.png}
+  \caption{normalised acf in percent against 2ps correl}
+  \label{fig:acf_decay}
+\end{figure}
+
+Figure \ref{fig:int_drift} shows drift in the conductivity at long correlation lengths. The ACF should decay to zero as correlation time tends to infinity, the fact that it doesn't shows noise. This will ultimately cause the integral diverge on long timescales. We believe 2-10~ps to be long enough for good sampling of the integral, and short enough to ignore drift-effects. REF Howell fit a series of exponential decays to their ACF, forcing the expected decay to zero and subsequent integral convergence. This is represents a significant improvement on the conductivity estimate at long correlation lengths, but is mostly similar with the un-fit integrals early in the correlation.   
+
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{images/4x4x3_01-z-ints.png}
+  \caption{kappa against 100ps correl}
+  \label{fig:int_drift}
+\end{figure}
+
+
+
+(show integral with uncertainty - and constituent integrals on same plot. windowed average to smooth graph?)
+
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{images/6x6x4_01-z-stddev.png}
+  \caption{kappa w/ uncertainty against 100ps correl}
+  \label{fig:664z_100ps}
+\end{figure}
+
+...AND ON THE SAME PLOT?...
+
+(show correlation length is long enough - should be obvious)
+
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{images/6x6x4_01-z-stddev_2-10ps.png}
+  \caption{kappa w/ uncertainty against 10ps correl}
+  \label{fig:664z_10ps}
+\end{figure}
+
+DONT NEED ALL THESE GRAPHS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{\label{sec:results}Results}
+
+\subsection{\label{sec:results.gk}Green-Kubo method}
+
+Looks like 4x4x3 is fine for CMB.
+
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{images/gk_fse_draft.png}
+  \caption{kappa vs. volume, all directions}
+  \label{fig:gk_fse}
+\end{figure}
+
+These parameter choices are justified by comparison with Green Kubo results (Figure~\ref{fig:gk-direct}), where the difference in computed conductivity is less than 0.4 W/m.K.
+
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{images/gk-direct.png}
+  \caption{The results of Figure 9 for cross-section of 2x2 and lengths ≤ 16 unit cells. Diagrams of cell geometry are shown, with dimensions in unit cells and the number of atoms. Green-Kubo result is plotted on the y-axis for comparison with extrapolated direct method conductivity.}
+  \label{fig:gk-direct}
+\end{figure}
+
+FINITE SIZE EFFECTS
+
+
+\subsection{\label{sec:results.direct}Direct method}
+
+In addition to the expected conductivity increase with cell length, we observe two effects of finite system size.
+
+Cells of length greater than 16 unit cells (1/N~\textless~0.0625 on Figure~\ref{fig:all_data}) show clear deviation from the expected linear trend.
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/all_data.png}
+  \caption{Compilation of direct method thermal conductivities across a range of cell shapes at 4000 K and static pressure of 136 GPa. Different cross-sections are displayed by the colour of the series, diagrams of which are shown in the legend (right). From right to left, data points correspond to lengths of 6, 8, 10, 12, 16, 24, and 48 unit cells. Inverted axes facilitate the extrapolation of conductivity to bulk material.}
+  \label{fig:all_data}
+\end{figure}
+
+As it is inappropriate to fit non-linear data, we ignore conductivity results from the long cells and perform the extrapolation only where a linear trend is suitable.
+
+While the extrapolation procedure requires multiple cell lengths, the effects of cell cross-sectional area are not considered. 
+
+We show cells with small cross-section overestimate conductivity, the magnitude of which decreases with increasing area. 
+
+A sufficient cross-sectional area for bridgmanite is greater than 2x2, as extrapolated conductivities converge. 
+
+To obtain thermal conductivity results that are converged with respect to direct method system size, we use the following criteria,
+
+Cell lengths $\leq$ 16 unit cells
+
+Cross-section = 2x2 unit cells
+
+SCALING LAW / THEORETICAL MODEL
+
+YOU SHOULD DO YOUR FSE ANALYSIS AT LARGEST MFP CONDITION PAIR, HIGH P LOW T
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{\label{sec:summary}Summary and conclusion}
+
+For bridgmanite, we show that use of the direct method for calculation of thermal conductivity will lead to an overestimate if the simulation cell is too long (\textgreater 16 unit cells). Small cross-sectional areas (\textless 2x2 unit cells) also overestimate the thermal conductivity. This informs future work using Density Functional Theory, and will allow a model of lower mantle conductivity considering composition to be established.
+
+
+
+(ASSUMING THE RESULTS ARE CORRECT AND AGREE WITH GK) We see the non-linear region as described by \citet{Sellan2010} for the cell length of 6 unit cells at 1000~K, which has individually higher conductivity than expected from the linear fit through data points corresponding to lengths of 8-16 unit cells. When included in the extrapolation, this reduces the gradient of the fit, raising the intercept and thus causing conductivity to be underestimated. At temperature of 4000~K, the 6 length cell is inline with the fit through cells with length less than 16 unit cells. As the ratio of cell length to phonon MFP increases with temperature, we believe the onset of divergence as described by Sellan et al. moves to the right (???). A shorter MFP needs a shorter cell length to display divergent conductivity, of which we have not sampled (at high temperature). DOING THE DIRECT METHOD WITH CELLS OF LENGTH LESS THAN 6 UNIT CELLS AT ANY TEMPERATURE IS A BAD IDEA BECAUSE ... 
+
+
+
+(ASSUMING 8 LENGTH IS LONGER THE MFP AND NOT 24) We find conductivity is definitely dependent on CSA, but we were not able to increase CSA enough to eliminate aspect ratio-dependent divergence as reported by \citet{Hu2011}. This does support our conclusion ignoring long cell lengths however, in order to keep the aspect ratio within a reasonable limit and ensure a linear fit is extrapolated. (EVEN THOUGH 48x8x8 HAS A SMALLER RATIO than 8x2x2?)
+
+Future work includes using density functional theory with the minimum atom count determined by this study to negate finite-size effects.  
+
+\begin{acknowledgements}
+Thank you NERC
+
+"We also acknowledge the use of high performance computing provided by Advanced Research Computing at the University of Leeds."
+
+ANDREW HAS SOMETHING TO ADD (AMW IRF from NERC w/ grant code)
+
+STEPHEN HAS SOMETHING TO ADD (LLSVP Grant from NERC / MSRC / ????)
+\end{acknowledgements}
+
+\bibliography{paper1}
+
+
+
+\end{document}
+
+

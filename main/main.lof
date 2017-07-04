@@ -1,0 +1,84 @@
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/ideal_extrap.png}
+  \caption{Idealised example of linear extrapolation procedure. Inverse computed conductivities are plotted against inverse simulation lengths. Extrapolation to y-axis gives conductivity of an infinite system length, i.e. the bulk material.}
+  \label{fig:ideal}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/gk_acf.png}
+  \caption{Normalised ACF. Correlation is taken over a longer length than shown on this plot (10 ps, see Figure 8 below), however the function decays to less than 1\% of its initial value at 2~ps. It continues to oscillate about zero, with a positive average value.}
+  \label{fig:gk_acf}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/gk_int.png}
+  \caption{Integrated ACF, multiplied by constants to get thermal conductivity. Large variation in the first 1 ps corresponds to the correlation time where the ACF is unconverged (still decaying / large oscillations). Thermal conductivity is averaged from correlation time of 5~ps - 10~ps (region in red box).}
+  \label{fig:gk_int}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/swap_int.png}
+  \caption{ADD IN TEMPERATURE INFORMATION}
+  \label{fig:swap_int}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/kappa_conv.png}
+  \caption{CAPTION}
+  \label{fig:kappa_conv}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/acf_decay_percent_correl.png}
+  \caption{normalised acf in percent against 2ps correl}
+  \label{fig:acf_decay}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/4x4x3_01-z-ints.png}
+  \caption{kappa against 100ps correl}
+  \label{fig:int_drift}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/6x6x4_01-z-stddev.png}
+  \caption{kappa w/ uncertainty against 100ps correl}
+  \label{fig:664z_100ps}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/6x6x4_01-z-stddev_2-10ps.png}
+  \caption{kappa w/ uncertainty against 10ps correl}
+  \label{fig:664z_10ps}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/gk_fse_draft.png}
+  \caption{kappa vs. volume, all directions}
+  \label{fig:gk_fse}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/gk-direct.png}
+  \caption{The results of Figure 9 for cross-section of 2x2 and lengths ≤ 16 unit cells. Diagrams of cell geometry are shown, with dimensions in unit cells and the number of atoms. Green-Kubo result is plotted on the y-axis for comparison with extrapolated direct method conductivity.}
+  \label{fig:gk-direct}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/all_data.png}
+  \caption{Compilation of direct method thermal conductivities across a range of cell shapes at 4000 K and static pressure of 136 GPa. Different cross-sections are displayed by the colour of the series, diagrams of which are shown in the legend (right). From right to left, data points correspond to lengths of 6, 8, 10, 12, 16, 24, and 48 unit cells. Inverted axes facilitate the extrapolation of conductivity to bulk material.}
+  \label{fig:all_data}
+
+\end{figure}
