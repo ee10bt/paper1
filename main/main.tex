@@ -180,14 +180,10 @@ Our approach will be very similar to that of \citet{Ammann2014}, who use the dir
 
 \subsection{\label{sec:intro.end}Intro to rest of paper (remove this subsection header later)}
 
-
-(CHANGE THIS PARA) 
-In section \ref{sec:theory} we explain how the methods work and expand on issues.
+In section \ref{sec:theory} (Section?) we provide an overview of the methods and expand on issues.
 In section \ref{sec:methodology} we outline our computational approaches, for the non-equilibrium molecular dynamics direct method and equilibrium molecular dynamics Green-Kubo method. The two methods have previously been compared (e.g. \citet{Schelling2002}), and have been found to give results in good agreement. 
-In section \ref{sec:results} we show convergence of computed conductivity with respect to simulation cell size and shape (AND PRESSURE/TEMPERATURE CONDITION?). 
-In section \ref{sec:summary} we suggest the minimum system parameters to be utilised in similar lower mantle studies, and discuss potential future work. ALSO IN IV, DISCUSS SCALING LAW / THEORETICAL MODEL?
-(CHANGE THIS PARA) 
-
+In section \ref{sec:results} we show convergence of computed conductivity with respect to simulation cell size and shape (AND PRESSURE/TEMPERATURE EFFECTS?). ALSO IN RESULTS, DISCUSS SCALING LAW / THEORETICAL MODEL?
+In section \ref{sec:summary} we suggest the minimum system parameters to be utilised in similar lower mantle studies, and discuss potential future work. 
 
 
 
@@ -197,9 +193,7 @@ In section \ref{sec:summary} we suggest the minimum system parameters to be util
 \subsection{\label{sec:intro.phon}Phonons (remove this subsection header later???)}
 
 PHYSICS JOURNAL LEVEL? 
-On the atomic scale heat is (CAN BE?) transported as lattice virbrations, or phonons (MENTION RADIATIVE/ELECTRICAL? MENTION HOW WE DON'T CARE ABOUT EITHER FOR BRIDG HERE?). The further phonons travel before scattering (mean free path, MFP) the more efficient the heat transport, and thus the higher the thermal condutivity. A number of effects (MATTHIESSEN'S RULE) cause phonons to scatter: (1) collisions with other phonons in the lattice, (2) boundaries or defects in the material, and (3) impurities in the atomic structure (ALSO ELECTRONS?). The finite-size effects we describe are associated with (1), where simulation system sizes are too small to recreate the phonon-phonon scattering of the bulk material. The FSE observed for a material will change with thermal conductivity/phonon MFP, and thus are pressure, temperature, and composition sensitive. Higher conductivity materials/conditions require larger systems to eliminate FSE (and vice versa) [[[BUT IS THIS TRUE? SHOULD IT BE IN THIS SECTION, OR DISCUSSION?]]]
-
-
+A fundamental concept in atomic scale simulations of thermal conductivity, heat is (CAN BE?) transported as lattice virbrations, or phonons (MENTION RADIATIVE/ELECTRICAL? MENTION HOW WE DON'T CARE ABOUT EITHER FOR BRIDG HERE?). The further phonons travel before scattering (mean free path, MFP) the more efficient the heat transport, and thus the higher the thermal condutivity. A number of effects (MATTHIESSEN'S RULE) cause phonons to scatter: (1) collisions with other phonons in the lattice, (2) boundaries or defects in the material, and (3) impurities in the atomic structure (ALSO ELECTRONS?). The finite-size effects we describe are associated with (1), where simulation system sizes are too small to recreate the phonon-phonon scattering of the bulk material. The FSE observed for a material will change with thermal conductivity/phonon MFP, and thus are pressure, temperature, and composition sensitive. Higher conductivity materials/conditions require larger systems to eliminate FSE (and vice versa) [[[BUT IS THIS TRUE? SHOULD IT BE IN THIS SECTION, OR DISCUSSION?]]]
 
 
 
@@ -212,7 +206,7 @@ q=-k \nabla{T} \label{fourier}.
 \end{equation}
 
 In the direct method energy is transferred from one group of atoms to another, creating hot and cold regions between which heat flows. The resultant temperature gradient is measured by calculating the temperature of individual groups of atoms along the direction of the heat flux. Simulation cells tend to be long relative to their cross-sectional area, defined as height by width. %(see Figure~\ref{fig:cell_dia}) 
-In this study (SHOULDN'T BE TALKING SPECIFIC AT THIS POINT?) cell boundaries are periodic and the hot and cold sections are half a cell apart, meaning heat flows out of both ends of the cell from hot to cold. This results in two similar temperature gradients which can be averaged.
+In this study (SHOULDN'T BE TALKING SPECIFIC AT THIS POINT?) cell boundaries are periodic and the hot and cold sections are half the cell length apart, meaning heat flows out of both ends of the cell from hot to cold. This results in two similar temperature gradients which can be averaged.
 
 %\begin{figure}[h]
 %  \includegraphics[width=\linewidth]{images/cell_diagram.png}
@@ -322,7 +316,7 @@ Using the classical molecular dynamics code LAMMPS(\citet{Plimpton1995}) (Large-
 
 To assess the finite-size effects within bridgmanite, we use larger simulation cells than those employed in previous studies. The atom counts associated with these cells (the largest cell considered having over 100,000 atoms) means an ab initio study would be impractical, necessitating the use of interatomic potentials. We expect the potentials to represent the finite size effects well, even if computed conductivities may inaccurate compared to first-principles calculations. 
 
-We present the basic idea of the direct and Green-Kubo methods and show our calculations are converged with respect to simulation time, and in addition the method-specific system parameters. (REMOVE? The finite size effect analysis can be found in Section.~\ref{sec:results}, along with the comparison of both techniques' results.)
+We present our approach for the direct and Green-Kubo methods and show our calculations are converged with respect to simulation time, and in addition the method-specific system parameters. (REMOVE? The finite size effect analysis can be found in Section.~\ref{sec:results}, along with the comparison of both techniques' results.)
 
 
 
@@ -377,27 +371,25 @@ BUT HAVEN'T DONE GK FSE AT 1000K!
 
 The bridgmanite unit cell does not have cell dimensions resembling a cube (a:b:c = 1:1:1.4), so we use supercell structures of 3x3x2, 4x4x3, 5x5x4, 6x6x4 etc. to make an approximately cubic simulation cell. Temperature initialisation of 1~ns is run to ensure convergence of system pressure and temperature. We choose a correlation length of 100~ps (WHICH IS WAY TOO LONG) to show convergence of the conductivity integral (and drift behaviour at long correlation time). 
 
-To obtain heat flux auto-correlation functions we run the simualtion for X~ns, repeated 10 times for each initial temperature condition,
+To obtain heat flux auto-correlation functions, a simulation for each initial temperature condition is run for 10 lots of X~ns. This gives 10 ACFs from each initial condition. This is done to be feasible computationally and provide enough samples for ensemble averaging statistics (???).
 
-3x3x2 - 10 x 10ns runs, for each of 10 inital conditions - 1 microsecond total time
+3x3x2 - X = 10~ns, for 20 inital conditions - 2 microsecond total time (find mu symbol!!!)
 
-4x4x3 - 10 x 10ns runs, for each of XX inital conditions - 2 microsecond total time
+4x4x3 - X = 10~ns, for 30 inital conditions - 3 microsecond total time
 
-5x5x4 - 10 x 5ns runs, for each of XX inital conditions - 1.5 microsecond total time 
+5x5x4 - X = 5~ns, for 30 inital conditions - 1.5 microsecond total time
 
-6x6x4 - 10 x 1ns runs, for each of XX initial conditions - 0.1 microsecond total time
+6x6x4 - X = 1~ns, for 70 inital conditions - 0.7 microsecond total time
 
 THIS INFO IN A TABLE, OR JUST GIVE FOR THE RELEVANT VOLUME?
 
-It is important that the total simulation time is long enough BECAUSE BELOW
-
-(SELLAN2010) Average over time and multiple simulations of different initial conditions. The total simulation time should be many times larger than the largest phonon relaxation times that dominate thermal conductivity, in order to accurately predict a converged value of the integral .
+%(SELLAN2010) Average over time and multiple simulations of different initial conditions. The total simulation time should be many times larger than the largest phonon relaxation times that dominate thermal conductivity, in order to accurately predict a converged value of the integral .
 
 ACFs are taken from all simulations and integrated seperately. A conductivity value is taken from each integral, all of which averaged for a final value with uncertainty (standard deviation of the mean). This process is performed for each crystallographic direction in each system volume. This allows the examination of anisotropy and finite system size effects.
 
 (show ACF oscillations / convergence to zero* [useful to show how how ACF convergence links with integral convergence])
 
-Conductivity values are obtained from each integral by averaging between correlation time of 2-10~ps. We show in Figure \ref{fig:acf_decay} that the magnitude of the ACF decays to much less than 1\% of its initial value around 1~ps, which should mean convergence of the integral and thus conductivity. %We stop averaging the integral after correlation time of 10~ps, despite having data for 100~ps. 
+Conductivity values are obtained from each integral by averaging (somewhere) between correlation times of 2-10~ps. We show in Figure \ref{fig:acf_decay} that the magnitude of the ACF decays to much less than 1\% of its initial value around 1~ps, inferring the start of convergence for the integral and thus conductivity. %We stop averaging the integral after correlation time of 10~ps, despite having data for 100~ps. 
 
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{images/acf_decay_percent_correl.png}
@@ -405,7 +397,7 @@ Conductivity values are obtained from each integral by averaging between correla
   \label{fig:acf_decay}
 \end{figure}
 
-Figure \ref{fig:int_drift} shows drift in the conductivity at long correlation lengths. The ACF should decay to zero as correlation time tends to infinity, the fact that it doesn't shows noise. This will ultimately cause the integral diverge on long timescales. We believe 2-10~ps to be long enough for good sampling of the integral, and short enough to ignore drift-effects. REF Howell fit a series of exponential decays to their ACF, forcing the expected decay to zero and subsequent integral convergence. This is represents a significant improvement on the conductivity estimate at long correlation lengths, but is mostly similar with the un-fit integrals early in the correlation.   
+Figure \ref{fig:int_drift} shows drift in the conductivity at long correlation lengths. The ACF should decay to zero as correlation time tends to infinity, the fact that it doesn't shows noise. This will ultimately cause the integral diverge on long timescales. We believe correlation length of 2-10~ps to be long enough for good sampling of the integral, and short enough to ignore drift-effects. REF Howell fit a series of exponential decays to their ACF, forcing the expected decay to zero and subsequent integral convergence. This is represents a significant improvement on the conductivity estimate at long correlation lengths, but is mostly similar with the un-fit integrals early in the correlation.   
 
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{images/4x4x3_01-z-ints.png}
@@ -433,6 +425,10 @@ Figure \ref{fig:int_drift} shows drift in the conductivity at long correlation l
   \label{fig:664z_10ps}
 \end{figure}
 
+
+CONVERGENCE OF KAPPA WITH SIMULATION TIME
+
+
 DONT NEED ALL THESE GRAPHS
 
 
@@ -453,7 +449,7 @@ DONT NEED ALL THESE GRAPHS
 
 \subsection{\label{sec:results.gk}Green-Kubo method}
 
-Looks like 4x4x3 is fine for CMB.
+A supercell volume of 3x3x2 fails to reproduce conductivities on the same order as the larger cells for all directions. We identify 4x4x3 and larger cells as being converged with respect to cell volume. This a useful result in terms of computation efficiency, as 6x6x4 supercells are 3 times as large as 4x4x3. Whereas here our error bars represent statistics on the integrals, the errors we take on results from 4x4x3 cells going forward will be related to the variation with the larger cells.
 
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{images/gk_fse_draft.png}

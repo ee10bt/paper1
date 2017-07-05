@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.4)  4 JUL 2017 11:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.4)  5 JUL 2017 18:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -351,50 +351,50 @@ Missing character: There is no Ì in font cmr12!
 Missing character: There is no ˆ in font cmr12!
  [2] [3] [4]
 
-LaTeX Warning: Reference `fig:ideal' on page 5 undefined on input line 242.
+LaTeX Warning: Reference `fig:ideal' on page 5 undefined on input line 236.
 
 \tf@pof=\write4
 \openout4 = `main.lof'.
 
 [5]
 
-LaTeX Warning: Reference `fig:gk_acf' on page 6 undefined on input line 279.
+LaTeX Warning: Reference `fig:gk_acf' on page 6 undefined on input line 273.
 
 
-LaTeX Warning: Reference `fig:gk_int' on page 6 undefined on input line 292.
+LaTeX Warning: Reference `fig:gk_int' on page 6 undefined on input line 286.
 
 [6] [7]
 
-LaTeX Warning: Reference `fig:swap_int' on page 8 undefined on input line 338.
+LaTeX Warning: Reference `fig:swap_int' on page 8 undefined on input line 332.
 
 
-LaTeX Warning: Reference `fig:kappa_conv' on page 8 undefined on input line 349
+LaTeX Warning: Reference `fig:kappa_conv' on page 8 undefined on input line 343
 .
 
 [8]
 
-LaTeX Warning: Reference `fig:acf_decay' on page 9 undefined on input line 400.
+LaTeX Warning: Reference `fig:acf_decay' on page 9 undefined on input line 392.
 
 
 
-LaTeX Warning: Reference `fig:int_drift' on page 9 undefined on input line 408.
+LaTeX Warning: Reference `fig:int_drift' on page 9 undefined on input line 400.
 
 
 [9]
 
-LaTeX Warning: Reference `fig:gk-direct' on page 10 undefined on input line 464
+LaTeX Warning: Reference `fig:gk-direct' on page 10 undefined on input line 460
 .
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 479.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 475.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 479.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 475.
 
 
-LaTeX Warning: Reference `fig:all_data' on page 10 undefined on input line 479.
+LaTeX Warning: Reference `fig:all_data' on page 10 undefined on input line 475.
 
 
 [10] [11] (./main.bbl
@@ -513,7 +513,7 @@ Here is how much of TeX's memory you used:
  8442 multiletter control sequences out of 15000+600000
  18017 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,30p,1036b,346s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,8n,30p,1091b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -529,7 +529,7 @@ xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (24 pages, 702608 bytes).
+Output written on main.pdf (24 pages, 703047 bytes).
 PDF statistics:
  159 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream
