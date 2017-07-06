@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.4)  5 JUL 2017 18:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.4)  6 JUL 2017 17:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -365,42 +365,40 @@ LaTeX Warning: Reference `fig:gk_int' on page 6 undefined on input line 286.
 
 [6] [7]
 
-LaTeX Warning: Reference `fig:swap_int' on page 8 undefined on input line 332.
-
-
-LaTeX Warning: Reference `fig:kappa_conv' on page 8 undefined on input line 343
+LaTeX Warning: Reference `fig:kappa_conv' on page 8 undefined on input line 347
 .
 
 [8]
 
-LaTeX Warning: Reference `fig:acf_decay' on page 9 undefined on input line 392.
+LaTeX Warning: Reference `fig:acf_decay' on page 9 undefined on input line 395.
 
 
 
-LaTeX Warning: Reference `fig:int_drift' on page 9 undefined on input line 400.
+LaTeX Warning: Reference `fig:int_drift' on page 9 undefined on input line 403.
 
 
 [9]
 
-LaTeX Warning: Reference `fig:gk-direct' on page 10 undefined on input line 460
+LaTeX Warning: Reference `fig:gk-direct' on page 10 undefined on input line 463
 .
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 475.
+[10]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 482.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omlcmr.fd
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 475.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 482.
 
 
-LaTeX Warning: Reference `fig:all_data' on page 10 undefined on input line 475.
+LaTeX Warning: Reference `fig:all_data' on page 11 undefined on input line 482.
 
 
-[10] [11] (./main.bbl
+[11] (./main.bbl [12]
 Missing character: There is no Ì in font cmr10!
 Missing character: There is no ˆ in font cmr10!
- [12])
+)
 
 Class revtex4-1 Warning: Environment acknowledgements is obsolete;
 Use acknowledgments instead.
@@ -429,63 +427,56 @@ File: images/gk_int.png Graphic file (type png)
 Package pdftex.def Info: images/gk_int.png used on input line 17.
 (pdftex.def)             Requested size: 468.0pt x 201.83124pt.
 
-<images/swap_int.png, id=69, 720.7728pt x 431.6928pt>
-File: images/swap_int.png Graphic file (type png)
-
-<use images/swap_int.png>
-Package pdftex.def Info: images/swap_int.png used on input line 24.
-(pdftex.def)             Requested size: 468.0pt x 280.30716pt.
- [16 <./images/ideal_extrap.png> <./images/gk_acf.png>] <images/kappa_conv.png,
- id=75, 376.40625pt x 292.84406pt>
+<images/kappa_conv.png, id=69, 376.40625pt x 292.84406pt>
 File: images/kappa_conv.png Graphic file (type png)
 
 <use images/kappa_conv.png>
-Package pdftex.def Info: images/kappa_conv.png used on input line 31.
+Package pdftex.def Info: images/kappa_conv.png used on input line 24.
 (pdftex.def)             Requested size: 468.0pt x 364.13274pt.
-
-<images/acf_decay_percent_correl.png, id=76, 380.92313pt x 289.83281pt>
+ [16 <./images/ideal_extrap.png> <./images/gk_acf.png>] <images/acf_decay_perce
+nt_correl.png, id=75, 380.92313pt x 289.83281pt>
 File: images/acf_decay_percent_correl.png Graphic file (type png)
 
 <use images/acf_decay_percent_correl.png>
 Package pdftex.def Info: images/acf_decay_percent_correl.png used on input line
- 38.
+ 31.
 (pdftex.def)             Requested size: 468.0pt x 356.09863pt.
- [17 <./images/gk_int.png> <./images/swap_int.png (PNG copy)>]
-<images/4x4x3_01-z-ints.png, id=81, 1148.03906pt x 610.53094pt>
+ [17 <./images/gk_int.png>]
+<images/4x4x3_01-z-ints.png, id=80, 1148.03906pt x 610.53094pt>
 File: images/4x4x3_01-z-ints.png Graphic file (type png)
 
 <use images/4x4x3_01-z-ints.png>
-Package pdftex.def Info: images/4x4x3_01-z-ints.png used on input line 45.
+Package pdftex.def Info: images/4x4x3_01-z-ints.png used on input line 38.
 (pdftex.def)             Requested size: 468.0pt x 248.88464pt.
  [18 <./images/kappa_conv.png (PNG copy)>]
-<images/6x6x4_01-z-stddev.png, id=85, 1147.28625pt x 608.2725pt>
+<images/6x6x4_01-z-stddev.png, id=84, 1147.28625pt x 608.2725pt>
 File: images/6x6x4_01-z-stddev.png Graphic file (type png)
 
 <use images/6x6x4_01-z-stddev.png>
-Package pdftex.def Info: images/6x6x4_01-z-stddev.png used on input line 52.
+Package pdftex.def Info: images/6x6x4_01-z-stddev.png used on input line 45.
 (pdftex.def)             Requested size: 468.0pt x 248.12178pt.
  [19 <./images/acf_decay_percent_correl.png (PNG copy)>]
-<images/6x6x4_01-z-stddev_2-10ps.png, id=90, 1156.32pt x 611.28375pt>
+<images/6x6x4_01-z-stddev_2-10ps.png, id=89, 1156.32pt x 611.28375pt>
 File: images/6x6x4_01-z-stddev_2-10ps.png Graphic file (type png)
 
 <use images/6x6x4_01-z-stddev_2-10ps.png>
 Package pdftex.def Info: images/6x6x4_01-z-stddev_2-10ps.png used on input line
- 59.
+ 52.
 (pdftex.def)             Requested size: 468.0pt x 247.40067pt.
 
-<images/gk_fse_draft.png, id=91, 542.77782pt x 463.7325pt>
+<images/gk_fse_draft.png, id=90, 542.77782pt x 463.7325pt>
 File: images/gk_fse_draft.png Graphic file (type png)
 
 <use images/gk_fse_draft.png>
-Package pdftex.def Info: images/gk_fse_draft.png used on input line 66.
+Package pdftex.def Info: images/gk_fse_draft.png used on input line 59.
 (pdftex.def)             Requested size: 468.0pt x 399.86356pt.
  [20 <./images/4x4x3_01-z-ints.png (PNG copy)> <./images/6x6x4_01-z-stddev.png 
 (PNG copy)>]
-<images/gk-direct.png, id=95, 753.5653pt x 612.03656pt>
+<images/gk-direct.png, id=94, 753.5653pt x 612.03656pt>
 File: images/gk-direct.png Graphic file (type png)
 
 <use images/gk-direct.png>
-Package pdftex.def Info: images/gk-direct.png used on input line 73.
+Package pdftex.def Info: images/gk-direct.png used on input line 66.
 (pdftex.def)             Requested size: 468.0pt x 380.10313pt.
 Missing character: There is no â in font cmr10!
 Missing character: There is no ‰ in font cmr10!
@@ -494,11 +485,11 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no ‰ in font cmr10!
 Missing character: There is no ¤ in font cmr10!
  [21 <./images/6x6x4_01-z-stddev_2-10ps.png (PNG copy)>] <images/all_data.png, 
-id=99, 995.21812pt x 520.94624pt>
+id=98, 995.21812pt x 520.94624pt>
 File: images/all_data.png Graphic file (type png)
 
 <use images/all_data.png>
-Package pdftex.def Info: images/all_data.png used on input line 80.
+Package pdftex.def Info: images/all_data.png used on input line 73.
 (pdftex.def)             Requested size: 468.0pt x 244.9799pt.
  [22 <./images/gk_fse_draft.png>]) [23 <./images/gk-direct.png>] [24 <./images/
 all_data.png>] (./main.aux)
@@ -507,13 +498,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4996 strings out of 492995
- 67249 string characters out of 6132705
+ 4990 strings out of 492995
+ 67128 string characters out of 6132705
  144838 words of memory out of 5000000
- 8442 multiletter control sequences out of 15000+600000
+ 8437 multiletter control sequences out of 15000+600000
  18017 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,30p,1091b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,8n,30p,1091b,316s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -529,10 +520,10 @@ xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (24 pages, 703047 bytes).
+Output written on main.pdf (24 pages, 680403 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
+ 158 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -21,13 +21,6 @@
 \end{figure}
 \begin{figure}
 
-  \includegraphics[width=\linewidth]{images/swap_int.png}
-  \caption{ADD IN TEMPERATURE INFORMATION}
-  \label{fig:swap_int}
-
-\end{figure}
-\begin{figure}
-
   \includegraphics[width=\linewidth]{images/kappa_conv.png}
   \caption{CAPTION}
   \label{fig:kappa_conv}

@@ -118,7 +118,7 @@ RESULTS
 
 \subsection{\label{sec:intro.intro}Intro Intro (remove this subsection header later)}
 
-A range of atomic scale simulation methods are available to determine the thermal conductivity of materials, which are invaluable in situations where experiments are difficult. An example of extreme conditions is the Earth\textsc{\char13}s lower mantle, where pressures and temperatures reach around 136~GPa and 4000~K above the core-mantle boundary (CMB). For many studies lowermost mantle thermal conductivity has been assumed to be 10~\wmk~(\citet{Lay2008}), but uncertainty in the extrapolation of low pressure and/or temperature experiments gives a range of 4~-~16 \wmk~(\citet{Brown1986, Osako1991, Hofmeister1999, Goncharov2009, Manthilake2011, Ohta2012}).
+A range of atomic scale simulation methods are available to determine the thermal conductivity of materials, which are invaluable in situations where experiments are difficult. An example of extreme conditions is the Earth\textsc{\char13}s lower mantle, where pressures and temperatures reach around 136~GPa and 4000~K above the core-mantle boundary (CMB). Many studies assume lowermost mantle thermal conductivity to be 10~\wmk~(\citet{Lay2008}), but uncertainty in the extrapolation of low pressure and/or temperature experiments gives a range of 4~-~16 \wmk~(\citet{Brown1986, Osako1991, Hofmeister1999, Goncharov2009, Manthilake2011, Ohta2012}).
 
 %MENTION THEORETICAL CALCULATIONS HERE? TRYING TO MAKE UNCERTAINTY IN EXPERIMENTS OBVIOUS, GOING TO TALK ABOUT THEORETICAL RESULTS JUST FOR PURE BRIDG 
  
@@ -132,9 +132,9 @@ A range of atomic scale simulation methods are available to determine the therma
 
 \subsection{\label{sec:intro.pre}Pre-intro to methods (remove this subsection header later)}
 
-A review of different methods to compute thermal conductivity is given by \citet{Stackhouse2010}, in the present work we focus on two methods:
+\citet{Stackhouse2010} give a review of different methods to compute thermal conductivity, in the present work we focus on two methods:
 (1) Equilibrium molecular dynamics utilising the Green-Kubo relations to determine the thermal conductivity from heat flux fluctuations and their time-dependence (\citet{Green1954,Kubo1957,Kubo1966,Schelling2002}). 
-(2) The ``direct method'' utilising non-equilbrium molecular dynamics, where the temperature gradient from an imposed heat flux is measured and related to the thermal conductivity via Fourier's Law [\citet{Muller-Plathe1997,Nieto-Draghi2013}]
+(2) The ``direct method'' utilising non-equilbrium molecular dynamics, where thermal conductivity relates to an imposed heat flux and resultant temperature gradient via Fourier's Law [\citet{Muller-Plathe1997,Nieto-Draghi2013}]
 
 %The important common atomic scale methods are: 
 %(3) Anharmonic lattice dynamics. [\citet{Tang2009}] %(BTE)CHERNATYNSKIY and PHILLPOT 2010?
@@ -316,29 +316,33 @@ Using the classical molecular dynamics code LAMMPS(\citet{Plimpton1995}) (Large-
 
 To assess the finite-size effects within bridgmanite, we use larger simulation cells than those employed in previous studies. The atom counts associated with these cells (the largest cell considered having over 100,000 atoms) means an ab initio study would be impractical, necessitating the use of interatomic potentials. We expect the potentials to represent the finite size effects well, even if computed conductivities may inaccurate compared to first-principles calculations. 
 
-We present our approach for the direct and Green-Kubo methods and show our calculations are converged with respect to simulation time, and in addition the method-specific system parameters. (REMOVE? The finite size effect analysis can be found in Section.~\ref{sec:results}, along with the comparison of both techniques' results.)
+We present our approach for the direct and Green-Kubo methods, and show our calculations are converged with respect to simulation time and correlation length respectively. The finite-size effect analysis for both methods can be found in Section.~\ref{sec:results}, along with a results comparison.
 
 
 
 
 \subsection{\label{sec:method.direct}Direct method}
 
-An important criterion for utilising the direct method is that the temperature gradient is sensible, too large a range between hot and cold sections means Fourier's law becomes invalid. 
+The simulation supercell is grouped into sections along its length, each half a unit cell wide. Two of these sections, half the supercell length apart, are designated as the heat source and sink. We measure the temperature in all sections to obtain the temperature gradient. This sets the minimum supercell length to 6 unit cells, in order for sufficient [statistics and resolution???] on the temperature gradient. 
 
-Additionally thermal conductivity is strongly temperature-dependent at upper lower-mantle conditions (1000~K), it is therefore undesirable to have substanially different conductivities as a of function of temperature across the cell. The opposite case is also true, the difference in temperature between hot and cold sections must be larger than the uncertainty in the average system temperature. 
+Heat flows in both directions away from the hot section because of cell periodicity, meaning there are two temperature gradients to average. Where L is supercell length in unit cells and S (= 2L) gives the number of sections, we obtain S/2 + 1 temperature points to fit the gradient. Because the temperature gradient is non-linear around the heat source and sink, we ignore S/12 sections (rounded to nearest integer) from both ends of the temperature gradient. For a given simulation cell we fit S/3 + 1 points to obtain the temperature gradient.
 
-We typically observe fluctuations in temperature of around $\pm$50~K during temperature equilibration, and thus look for temperature ranges on the order of $\pm$100~K compared to the mean temperature. We control the magnitude of the gradient by altering the interval at which heat is exchanged. To produce the desired gradients we find shorter intervals are required as cell length decreases, cross-sectional area increases, and system equilibrium temperature decreases. 
+Changing the width of the heated sections has no effect on the conductivity result. Furthermore, changing the width (and thus number) of temperature bins has no effect on the sampled gradient, assuming resolution is large enough to capture the non-linear region around the heat source/sink.
 
-Figure \ref{fig:swap_int} (larger y-axis range?) shows conductivity as a function of swap interval for a 6x2x2 system at 136~GPa and 1000~K. Values are erratic for high interval / low temperature range swaps (right), and converge with decreasing swap interval (left). An interval around 10~timesteps produces suitable results for these system conditions, whilst exhibiting a sensible temperature range for the reasons mentioned above. 
+An important criterion for utilising the direct method is that the temperature gradient is sensible, too large a range between hot and cold sections means Fourier's law becomes invalid. Additionally thermal conductivity is strongly temperature-dependent at upper lower-mantle conditions (1000~K), it is therefore undesirable to have substanially different conductivities as a of function of temperature across the cell. The opposite case is also true, the difference in temperature between hot and cold sections must be larger than the uncertainty in the average system temperature. 
+
+We typically observe fluctuations in temperature of around $\pm$50~K during temperature equilibration, and look for temperature increases/decreases on the order of 10\% the mean temperature. We control the magnitude of the gradient by altering the interval at which heat is exchanged. To produce the desired gradients we find shorter intervals are required as cell length decreases, cross-sectional area increases, and system equilibrium temperature decreases. 
+
+%Figure \ref{fig:swap_int} (larger y-axis range?) shows conductivity as a function of swap interval for a 6x2x2 system at 136~GPa and 1000~K. Values are erratic for high interval / low temperature range swaps (right), and converge with decreasing swap interval (left). An interval around 10~timesteps produces suitable results for these system conditions, whilst exhibiting a sensible temperature range for the reasons mentioned above. 
 % the finite-distance approximation associated with molecular dynamics
 
 %This process is accelerated when heat is exchanged often, an important thing to check for when processing data.
 
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth]{images/swap_int.png}
-  \caption{ADD IN TEMPERATURE INFORMATION}
-  \label{fig:swap_int}
-\end{figure}
+%\begin{figure}[h!]
+%  \includegraphics[width=\linewidth]{images/swap_int.png}
+%  \caption{ADD IN TEMPERATURE INFORMATION}
+%  \label{fig:swap_int}
+%\end{figure}
 
 We ensure all calculations are run for a sufficient length of time for the conductivity value to converge (see Figure \ref{fig:kappa_conv}). When conductivity fails to converge it means either the simulations needs to be run for longer (unlikely with our nanosecond-scale classical calculations), or the system temperature has drifted. When NVE simulations are run for a long time there is noticable drift in the average system temperature (due to  numerical approximations in the equation of motion), which in turn causes drift in the computed conductivity.
 
@@ -349,9 +353,8 @@ We ensure all calculations are run for a sufficient length of time for the condu
   \label{fig:kappa_conv}
 \end{figure}
 
-We consider FSE in the computed thermal conductivity at geophysically-relevant conditions of the CMB, but also consider the unphysical pressure/temperatures of 136~GPa and 1000~K. 
-MFP DEPENDENT FSE, PROVE DIFFERENCE. 
-BUT HAVEN'T DONE GK FSE AT 1000K!
+
+
 
 
 
@@ -469,6 +472,10 @@ FINITE SIZE EFFECTS
 
 
 \subsection{\label{sec:results.direct}Direct method}
+
+(((We consider FSE in the computed thermal conductivity at geophysically-relevant conditions of the CMB, but also consider the unphysical pressure/temperatures of 136~GPa and 1000~K.)))
+MFP DEPENDENT FSE, PROVE DIFFERENCE. 
+BUT HAVEN'T DONE GK FSE AT 1000K!
 
 In addition to the expected conductivity increase with cell length, we observe two effects of finite system size.
 
