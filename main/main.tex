@@ -53,7 +53,7 @@ nofootinbib,
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[printfigures]{figcaps} % send figures to end
+%\usepackage[printfigures]{figcaps} % send figures to end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -95,7 +95,6 @@ nofootinbib,
              %  but any date may be explicitly specified
 
 \begin{abstract}
-test2
 
 Knowledge of thermal conductivity is important for modelling the deep earth, but can not be measured experimentally at core mantle boundary conditions. Atomic scale simulations sidestep experimental limitations, but system size must be chosen carefully in order to determine accurate conductivity values.
 
@@ -268,9 +267,9 @@ A third effect of system size can cause an incorrect conductivity extrapolation,
 
 \subsection{\label{sec:intro.gk}Green-Kubo method (remove this subsection header later???)}
 
-Instantaneous heat fluxes can be used to determine how energy is dissipated within a system, where brief flux events mean heat is transferred quickly indicating high thermal conductivity (and vice versa). AW WANTS MORE WORDS HERE, MORE THAN WHAT IS BELOW?
+REDUNDANCY WITH METHODOLOGY
 
-The Green-Kubo method uses auto-correlation functions (ACFs) to quantify time-dependence of heat fluxes (shown in Figure~\ref{fig:gk_acf}, and Equation \ref{acf-j}), in a simulation cell of roughly cubic dimensions and spatially-consistent average temperature. Auto-correlation is performed over the net heat flux series in each crystallographic direction, for a timescale up to a user-specified correlation length.
+The Green-Kubo method uses auto-correlation functions (ACFs) to quantify time-dependence of heat fluxes (shown in Figure~\ref{fig:gk_acf}, and Equation \ref{acf-j}), in a simulation cell of roughly cubic dimensions and spatially-consistent average temperature. Instantaneous heat fluxes can be used to determine how energy is dissipated within a system, where brief flux events mean heat is transferred quickly indicating high thermal conductivity (and vice versa). Auto-correlation is performed over the net heat flux series in each crystallographic direction, for a timescale up to a user-specified correlation length.
 
 \begin{equation}
 ACF_i = \left \langle J_i(0) \cdot  J_i(t) \right \rangle,
@@ -296,11 +295,11 @@ where $i$ specifies crystallographic axis, $J$ is heat flux, and $t$ is the corr
   \label{fig:gk_int}
 \end{figure}
 %%%%%%%%%%%%%%%%
-where $V$ is the simulation cell volume, $k_B$ is the Boltzmann constant, and $T$ is the average temperature of the system. In this study we use Green-Kubo results as an independent check on the direct method, as they do not have the same finite size-effects. Obtaining a converged conductivity result simply depends on using a large enough cell volume / number of atoms. The bridgmanite unit cell we employ has a lattice parameter ratio (a:b:c) of roughly 1:1:1.4, meaning an approximately cubic simulation supercell should have dimensions 3x3x2, 4x4x3, 5x5x4, 6x6x4 etc. STACKHOUSE 2010 REFERENCES Volz and Chen 2000; Sun and Murthy 2006
+where $V$ is the simulation cell volume, $k_B$ is the Boltzmann constant, and $T$ is the average temperature of the system. In this study we use Green-Kubo results as an independent check on the direct method, as they do not have the same finite size-effects. Obtaining a converged conductivity result simply depends on using a large enough cell volume / number of atoms. 
 
 The individual integrals obtained from the Green-Kubo show variation from the mean on the order of \wmk. Many simulations from different intital temperature conditions are required in order to ensure good sampling of conductivity, as well as ensuring the computation time for each is long enough for convergence. This makes Green-Kubo a computationally expense method, especially for large systems.
 
-
+STACKHOUSE 2010 REFERENCES Volz and Chen 2000; Sun and Murthy 2006
 
 
 
@@ -372,27 +371,34 @@ We ensure all calculations are run for a sufficient length of time for the condu
 
 \subsection{\label{sec:method.gk}Green-Kubo method}
 
-The bridgmanite unit cell does not have cell dimensions resembling a cube (a:b:c = 1:1:1.4), so we use supercell structures of 3x3x2, 4x4x3, 5x5x4, 6x6x4 etc. to make an approximately cubic simulation cell. Temperature initialisation of 1~ns is run to ensure convergence of system pressure and temperature. We choose a correlation length of 100~ps (WHICH IS WAY TOO LONG) to show convergence of the conductivity integral (and drift behaviour at long correlation time). 
+REDUNDANCY WITH THEORY SECTION
 
-To obtain heat flux auto-correlation functions, a simulation for each initial temperature condition is run for 10 lots of X~ns. This gives 10 ACFs from each initial condition. This is done to be feasible computationally and provide enough samples for ensemble averaging statistics (???).
+The bridgmanite unit cell does not have cell dimensions resembling a cube (a:b:c = 1:1:1.4), so we use supercell structures of 3x3x2, 4x4x3, 5x5x4, 6x6x4 etc. to make an approximately cubic simulation cell. Temperature initialisation (NVT) of 1~ns is run to ensure convergence of system pressure and temperature. To obtain heat flux auto-correlation functions, a simulation for each initial temperature condition is run for X~ns, with 9 successive repeats for a total of 10 jobs. This gives 10 ACFs from each initial condition. Simulation runs are split in this manner to be feasible computationally, and also to provide enough samples for ensemble averaging statistics (???).
 
-3x3x2 - X = 10~ns, for 20 inital conditions - 2 microsecond total time (find mu symbol!!!)
+3x3x2 - X = 10~ns, for 20 inital conditions - 2~$\mu$s total time
 
-4x4x3 - X = 10~ns, for 30 inital conditions - 3 microsecond total time
+4x4x3 - X = 10~ns, for 30 inital conditions - 3~$\mu$s total time
 
-5x5x4 - X = 5~ns, for 30 inital conditions - 1.5 microsecond total time
+5x5x4 - X = 5~ns, for 20 inital conditions - 1~$\mu$s, X = 1~ns, for 70 inital conditions - 0.7~$\mu$s, 1.7~$\mu$s total time
 
-6x6x4 - X = 1~ns, for 70 inital conditions - 0.7 microsecond total time
+6x6x4 - X = 1~ns, for 80 inital conditions - 0.8~$\mu$s total time
 
 THIS INFO IN A TABLE, OR JUST GIVE FOR THE RELEVANT VOLUME?
 
+In this study we compute ACFs up to correlation lengths of 100~ps, with 1~fs timesteps. This length is longer than required but selected as a proof of concept to show convergence in the conductivity result, additionally to display the extent and behaviour of drift in the integrals for long correlation times. We show in Figure \ref{fig:acf_decay} that the magnitude of the ACF decays to much less than 1\% of its initial value around a correlation time of 1~ps, inferring the start of convergence for the integral and thus conductivity. (ACF FIGURE FOR CORREL < 10PS?, RUNNING AVERAGE SHOWS CONVERGENCE) 
+
+Figure \ref{fig:int_drift} shows drift in the integral at long correlation lengths. The ACF should decay to zero as correlation time tends to infinity, however noise in the ACF prevents this. This will ultimately cause the integral to diverge on long timescales. \citet{Howell2012} fits a series of exponential decays to their ACF, forcing the expected decay to zero and subsequent (constant) integral convergence. This is represents a significant improvement on the conductivity estimate at long correlation lengths, but is mostly similar with the un-fit integrals early in the correlation. (INTEGRAL DRIFT FIGURE, JUST THE ONE INTEGRAL FOR 100PS)
+
+ACFs produced by each simulation are integrated seperately, after which the integrals are averaged into a single series with uncertainty (standard deviation of the mean, \ref{fig:664z_100ps}). This process is performed for heat fluxes in each crystallographic direction, allowing analysis of anisotropy and finite system size effects. We obtain a conductivity value from the combined integral by averaging a window (somewhere) between correlation times of 2-10~ps. Windows are chosen to capture a flat, converged region of the integral, or the section just after the 'bottleneck' if convergence is not obvious (\ref{fig:664z_10ps}, but show window, and example of bottleneck?). We find correlation time of 2-10~ps to be long enough for good sampling of the integral, and short enough to ignore the aforementioned drift-effects. (INTEGRAL FIGURE WITH UNCERTAINTY FOR <10PS?, POINT TO CONVERGENCE, SHOW SMALL ZOOM OUT OF SAME GRAPH UP TO 100PS. SOME WAY TO COMBINE WITH ABOVE FIGURE)
+
+
+
+
 %(SELLAN2010) Average over time and multiple simulations of different initial conditions. The total simulation time should be many times larger than the largest phonon relaxation times that dominate thermal conductivity, in order to accurately predict a converged value of the integral .
 
-ACFs are taken from all simulations and integrated seperately. A conductivity value is taken from each integral, all of which averaged for a final value with uncertainty (standard deviation of the mean). This process is performed for each crystallographic direction in each system volume. This allows the examination of anisotropy and finite system size effects.
+CONVERGENCE OF KAPPA WITH SIMULATION TIME
 
-(show ACF oscillations / convergence to zero* [useful to show how how ACF convergence links with integral convergence])
-
-Conductivity values are obtained from each integral by averaging (somewhere) between correlation times of 2-10~ps. We show in Figure \ref{fig:acf_decay} that the magnitude of the ACF decays to much less than 1\% of its initial value around 1~ps, inferring the start of convergence for the integral and thus conductivity. %We stop averaging the integral after correlation time of 10~ps, despite having data for 100~ps. 
+DONT NEED ALL THESE GRAPHS
 
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{images/acf_decay_percent_correl.png}
@@ -400,17 +406,11 @@ Conductivity values are obtained from each integral by averaging (somewhere) bet
   \label{fig:acf_decay}
 \end{figure}
 
-Figure \ref{fig:int_drift} shows drift in the conductivity at long correlation lengths. The ACF should decay to zero as correlation time tends to infinity, the fact that it doesn't shows noise. This will ultimately cause the integral diverge on long timescales. We believe correlation length of 2-10~ps to be long enough for good sampling of the integral, and short enough to ignore drift-effects. REF Howell fit a series of exponential decays to their ACF, forcing the expected decay to zero and subsequent integral convergence. This is represents a significant improvement on the conductivity estimate at long correlation lengths, but is mostly similar with the un-fit integrals early in the correlation.   
-
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{images/4x4x3_01-z-ints.png}
   \caption{kappa against 100ps correl}
   \label{fig:int_drift}
 \end{figure}
-
-
-
-(show integral with uncertainty - and constituent integrals on same plot. windowed average to smooth graph?)
 
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{images/6x6x4_01-z-stddev.png}
@@ -418,21 +418,12 @@ Figure \ref{fig:int_drift} shows drift in the conductivity at long correlation l
   \label{fig:664z_100ps}
 \end{figure}
 
-...AND ON THE SAME PLOT?...
-
-(show correlation length is long enough - should be obvious)
-
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{images/6x6x4_01-z-stddev_2-10ps.png}
   \caption{kappa w/ uncertainty against 10ps correl}
   \label{fig:664z_10ps}
 \end{figure}
 
-
-CONVERGENCE OF KAPPA WITH SIMULATION TIME
-
-
-DONT NEED ALL THESE GRAPHS
 
 
 
