@@ -480,13 +480,7 @@ LOTS OF QUANTIFYING
 
 \subsection{\label{sec:results.gk}Green-Kubo method}
 
-<<<<<<< HEAD
-A supercell volume of 3x3x2 fails to reproduce conductivities on the same order as the larger cells for all directions. We identify 4x4x3 and larger cells as being converged with respect to cell volume. This a useful result in terms of computation efficiency, as 6x6x4 supercells are 3 times as large as 4x4x3. 
-
-(BUT I WON'T HAVE 6x6x4 FOR FUTURE, NEED A MEASURE FOR ERROR) Whereas here our error bars represent statistics on the integrals, the errors we take on results from 4x4x3 cells going forward will be related to the small variation from the 6x6x4 supercell.
-=======
 A supercell volume of 3x3x2 (((REFER TO GRAPH, WILL NEED 1000K TOO))) fails to reproduce conductivities on the same order as the larger cells for all directions. We identify 4x4x3 and larger cells as being converged with respect to cell volume (((PROBLEMATIC STATEMENT, NOT CONVINCING, BY WHAT METRIC?))). This a useful result in terms of computation efficiency, as 6x6x4 supercells are 3 times as large (VOLUMOUS? REFERENCE ATOM COUNT?) as 4x4x3. Whereas here our error bars represent statistics on the integrals, the errors we take on results from 4x4x3 cells going forward will be related to the variation with the larger cells ((THIS IS OBVIOUS NONSENSE, HAVE TO CHANGE)).
->>>>>>> 185dc0b40c8bbec3183ccc9f940f4a20c047fbbe
 
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{images/gk_fse_draft.png}
@@ -496,22 +490,16 @@ A supercell volume of 3x3x2 (((REFER TO GRAPH, WILL NEED 1000K TOO))) fails to r
 
 
 
-<<<<<<< HEAD
-=======
+
+
+
+
+
 \subsection{\label{sec:results.direct}Direct method}
 
-(((We consider FSE in the computed thermal conductivity at geophysically-relevant conditions of the CMB, but also consider the unphysical pressure/temperatures of 136~GPa and 1000~K.)))
 MFP DEPENDENT FSE, PROVE DIFFERENCE. 
-BUT HAVEN'T DONE GK FSE AT 1000K! UPDATE - GK RUINS EVERYTHING
->>>>>>> 185dc0b40c8bbec3183ccc9f940f4a20c047fbbe
 
-
-
-
-
-\subsection{\label{sec:results.direct}Direct method}
-
-When determine finite-size effects, it is important to consider the scenario with largest phonon mean-free paths. Phonon MFPs are largest at low temperatures (beyond the Debye temperature) and high pressures. In light of this we consider pressure of 136~GPa and temperatures of 1000~K and 4000~K. 136~GPa / 4000~K represents the expected conditions of the core-mantle boundary, whereas 136~GPa / 1000~K is unphysical in the context of the Earth but maximises MFP.  BUT I HAVENT DONE GK 1000K, CAREFUL WORDING NEEDED
+When determining finite-size effects, it is important to consider the scenario with largest phonon mean-free paths. Phonon MFPs are largest at low temperatures (beyond the Debye temperature) and high pressures. In light of this we consider pressure of 136~GPa and temperatures of 1000~K and 4000~K. 136~GPa / 4000~K represents the expected conditions of the core-mantle boundary, whereas 136~GPa / 1000~K is unphysical in the context of the Earth but maximises MFP.  UPDATE - GK RUINS EVERYTHING
 
 By computing conductivities across a range of cell lengths we show that direct method simulations with small cross-sectional areas fail to produce converged results with respect to larger CSAs. Without considering any extrapolation, it is clear that small CSA cells overestimate conductivity (Figures \ref{fig:direct_length_graph_4000} \& \ref{fig:direct_length_graph_1000}) at conditions of both 1000~K and 4000~K. On both figures the results for cells with CSA 2x2 and larger plot close to on top of each other. Producing the same results as 8x8 cells, we conclude that cells with CSA of 2x2 are suitable for direct method simulations of bridgmanite.
 
@@ -529,16 +517,11 @@ By computing conductivities across a range of cell lengths we show that direct m
 
 Now considering CSAs of 2x2, we examine the divergence of conductivity result with cell length from an expected linear trend (Figure \ref{fig:direct_length_graph}). As mentioned in Section \ref{sec:theory.direct}, cells that are too long or short cause a conductivity result to be overestimated. At 4000~K we find that cells up to 24 unit cells length ($<$0.06 in inverse length) produce a reasonably linear trend. At this condition, there is no reasonable overestimation due to short cells and ballistic phonon transport. However at 1000~K where the MFP is longer, a cell of length 6 unit cells (inverse length 0.167) produces conductivity larger than expected. The same long-cell divergence is found $>$24 unit cells length, the onset of insufficient phonon sampling. For all direct method simulations of bridgmanite at lower mantle conditions, we recommend employing cell lengths of 8~-~$<$24 unit cells. Due to the increasing computational cost associated with cell length (especially for ab initio methods), we recommend the longest cells be 16 unit cells. FINITE SIZE EFFECTS INCREASE WITH MFP/KAPPA
 
-<<<<<<< HEAD
 \begin{figure}[h]
   \includegraphics[width=\linewidth]{images/direct_length_graph.png}
   \caption{off-colour data points are not fit. Although the 1000~K data points look closer to the linear trend, they are further in magnitude due to the nature of the inverse y-axis.}
   \label{fig:direct_length_graph}
 \end{figure}
-=======
-PREVIOUS WORK :(
-
->>>>>>> 185dc0b40c8bbec3183ccc9f940f4a20c047fbbe
 
 \begin{figure}[h]
   \includegraphics[width=\linewidth]{images/direct_length_table.png}
@@ -569,6 +552,8 @@ SCALING LAW / THEORETICAL MODEL
 
 PROBABLY SHOULD MENTION THE VALUE OF THE RESULT?
 
+PREVIOUS WORK :(
+
 
 
 
@@ -577,17 +562,9 @@ PROBABLY SHOULD MENTION THE VALUE OF THE RESULT?
 
 \section{\label{sec:summary}Summary and conclusion}
 
-<<<<<<< HEAD
-For bridgmanite at conditions representing the lower mantle, we show that use of the direct method for calculation of thermal conductivity will lead to an overestimate if the simulation cell is too long (\textgreater 16 unit cells). Small cross-sectional areas (\textless 2x2 unit cells) also overestimate the thermal conductivity. This informs future work using Density Functional Theory, and will allow a model of lower mantle conductivity considering composition to be established.
-=======
-For bridgmanite, we show that use of the direct method for calculation of thermal conductivity will lead to an overestimate if the simulation cell is too long (\textgreater 16 unit cells). Small cross-sectional areas (\textless 2x2 unit cells) also overestimate the thermal conductivity. This informs future work using Density Functional Theory, and will allow a model of lower mantle conductivity considering composition to be established.
-
-
+For bridgmanite (at conditions representing the lower mantle), we show that use of the direct method for calculation of thermal conductivity will lead to an overestimate if the simulation cell is too long (\textgreater 16 unit cells). Small cross-sectional areas (\textless 2x2 unit cells) also overestimate the thermal conductivity. This informs future work using Density Functional Theory, and will allow a model of lower mantle conductivity considering composition to be established.
 
 (ASSUMING THE RESULTS ARE CORRECT AND AGREE WITH GK) We see the non-linear region as described by \citet{Sellan2010} for the cell length of 6 unit cells at 1000~K, which has individually higher conductivity than expected from the linear fit through data points corresponding to lengths of 8-16 unit cells. When included in the extrapolation, this reduces the gradient of the fit, raising the intercept and thus causing conductivity to be underestimated. At temperature of 4000~K, the 6 length cell is inline with the fit through other cells with length less than 16 unit cells. As the ratio of cell length to phonon MFP increases with temperature, we believe the onset of divergence as described by Sellan et al. moves to the right (??? - MENTION ACTUAL EFFECT - QUANTIFY RATHER THAN REFERENCING GRAPH). A shorter MFP needs shorter cell lengths to display divergent conductivity, of which we have not sampled (at high temperature). DOING THE DIRECT METHOD WITH CELLS OF LENGTH LESS THAN 6 UNIT CELLS AT ANY TEMPERATURE IS A BAD IDEA BECAUSE ... 
->>>>>>> 185dc0b40c8bbec3183ccc9f940f4a20c047fbbe
-
-We see the non-linear region as described by \citet{Sellan2010} for the cell length of 6 unit cells at 1000~K, which has individually higher conductivity than expected from the linear fit through data points corresponding to lengths of 8-16 unit cells. When included in the extrapolation, this reduces the gradient of the fit, raising the intercept and thus causing conductivity to be underestimated. At temperature of 4000~K, the 6 length cell is inline with the fit through cells with length less than 16 unit cells. As the ratio of cell length to phonon MFP increases with temperature, we believe the onset of divergence as described by Sellan et al. moves to the right (???). A shorter MFP needs a shorter cell length to display divergent conductivity, of which we have not sampled (at high temperature). 
 
 We find conductivity is definitely dependent on CSA, but we were not able to increase CSA enough to eliminate aspect ratio-dependent divergence as reported by \citet{Hu2011}. This does support our conclusion ignoring long cell lengths however, in order to keep the aspect ratio within a reasonable limit and ensure a linear fit is extrapolated. (EVEN THOUGH 48x8x8 HAS A SMALLER RATIO than 8x2x2?)
 
