@@ -1,14 +1,12 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.26)  13 JUL 2017 17:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.4)  10 NOV 2017 10:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
-LaTeX2e <2011/06/27>
-Babel <3.9g> and hyphenation patterns for 78 languages loaded.
-
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/revtex/rev
-tex4-1.cls
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/revtex/revtex4-1.cls
 Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revt
 ex4/ for documentation)
  Copyright (c) 2009 The American Physical Society.
@@ -68,9 +66,7 @@ Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
 \widetext@top=\box39
 \widetext@bot=\box40
 Class revtex4-1 Info: Selecting society aps on input line 7542.
-
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/revtex/aps
-4-1.rtx
+(/usr/local/texlive/2017/texmf-dist/tex/latex/revtex/aps4-1.rtx
 File: aps4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for docu
 mentation)
 Class revtex4-1 Info: RevTeX society APS selected on input line 31.
@@ -79,23 +75,18 @@ Class revtex4-1 Info: RevTeX society APS selected on input line 31.
 Class revtex4-1 Warning: No journal specified, using default pra.
 
 Class revtex4-1 Info: APS journal PRA selected on input line 7545.
-
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/revtex/aps
-12pt4-1.rtx
+(/usr/local/texlive/2017/texmf-dist/tex/latex/revtex/aps12pt4-1.rtx
 File: aps12pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for 
 documentation)
 Class revtex4-1 Info: RevTeX pointsize 12pt selected on input line 30.
 )
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/textcase/t
-extcase.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
 )
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/amsfonts/a
-mssymb.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/amsfonts/a
-msfonts.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks16
 \symAMSa=\mathgroup4
@@ -103,49 +94,43 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/amsmath/am
-smath.sty
-Package: amsmath 2013/01/14 v2.14 AMS math features
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/amsmath/am
-stext.sty
-Package: amstext 2000/06/29 v2.01
-
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/amsmath/am
-sgen.sty
-File: amsgen.sty 1999/11/30 v2.0
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen102
 )
-LaTeX Info: Redefining \text on input line 39.
+LaTeX Info: Redefining \text on input line 28.
 )
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/amsmath/am
-sbsy.sty
-Package: amsbsy 1999/11/29 v1.2d
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen103
 )
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/amsmath/am
-sopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count94
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 213.
 \uproot@=\count95
 \leftroot@=\count96
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 375.
 \classnum@=\count97
 \DOTSCASE@=\count98
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box41
 \strutbox@=\box42
 \big@size=\dimen104
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count99
 \c@MaxMatrixCols=\count100
 \dotsspace@=\muskip10
@@ -166,16 +151,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \multlinegap=\skip45
 \multlinetaggap=\skip46
 \mathdisplay@stack=\toks21
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/url/url.st
-y
+(/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/natbib/nat
-bib.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip47
 \bibsep=\skip48
@@ -184,16 +167,14 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7549.
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/revtex/rev
-symb4-1.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/revtex/revsymb4-1.sty
 Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ f
 or documentation)
 LaTeX Info: Redefining \frak on input line 95.
 LaTeX Info: Redefining \Bbb on input line 111.
 LaTeX Info: Redefining \REV@mathfrak on input line 119.
 ))
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/lineno/lin
-eno.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count107
 \output=\toks22
@@ -211,69 +192,62 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframebox=\box43
 LaTeX Info: Redefining \\ on input line 3056.
 )
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/graphics/g
-raphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/graphics/k
-eyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks23
 )
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/graphics/g
-raphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/graphics/t
-rig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/latexconfi
-g/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/pdftex-def
-/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/generic/oberdiek
-/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/generic/oberdiek
-/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count114
 ))
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
 )
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/tools/dcol
-umn.sty
-Package: dcolumn 2001/05/28 v1.06 decimal alignment package (DPC)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/preprint/figcaps.sty
+Package: figcaps 1999/02/23 4.7 (PWD)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/tools/arra
-y.sty
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen118
 \extrarowheight=\dimen119
 \NC@list=\toks24
 \extratabsurround=\skip49
 \backup@length=\skip50
 ))
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/tools/bm.s
-ty
-Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
 \symboldsymbols=\mathgroup8
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
-LaTeX Info: Redefining \bm on input line 204.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
 )
-Class revtex4-1 Info: Patching array package. on input line 78.
+Class revtex4-1 Info: Unrecognized array package. Please update this document c
+lass! (Proceeding with fingers crossed.) on input line 78.
 Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 78.
 
 Class revtex4-1 Info: cite was not loaded (OK!) on input line 78.
@@ -295,8 +269,7 @@ LaTeX Font Info:    ... okay on input line 78.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/context/base/sup
-p-pdf.mkii
+(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count115
 \scratchdimen=\dimen120
@@ -309,62 +282,52 @@ p-pdf.mkii
 \MPnumerator=\count119
 \makeMPintoPDFobject=\count120
 \everyMPtoPDFconversion=\toks26
-)
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/generic/oberdiek
-/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/generic/oberdiek
-/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/generic/oberdiek
-/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/oberdiek/e
-pstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/oberdiek/g
-rfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/generic/oberdiek
-/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/oberdiek/k
-voptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/generic/oberdiek
-/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/generic/oberdiek
-/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
+(grfext)             \AppendGraphicsExtensions on input line 456.
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/latexconfi
-g/epstopdf-sys.cfg
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -376,107 +339,158 @@ Class revtex4-1 Info: Reinvoke \linenumbers on input line 78.
 Class revtex4-1 Info: Overriding \@LN@LLerror on input line 78.
 LaTeX Font Info:    Try loading font information for U+msa on input line 108.
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/amsfonts/u
-msa.fd
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 108.
 
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/amsfonts/u
-msb.fd
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/apps/applications/texlive/2013/1/default/2013/texmf-var/fonts/map/pdftex/
-updmap/pdftex.map}]
+) [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Missing character: There is no Ì in font cmr12!
 Missing character: There is no ˆ in font cmr12!
  [2] [3] [4]
-<images/ideal_extrap.png, id=28, 945.5325pt x 403.5075pt>
+
+LaTeX Warning: Reference `fig:ideal' on page 5 undefined on input line 235.
+
+\tf@pof=\write4
+\openout4 = `main.lof'.
+
+[5]
+
+LaTeX Warning: Reference `fig:gk_acf' on page 6 undefined on input line 272.
+
+
+LaTeX Warning: Reference `fig:gk_int' on page 6 undefined on input line 285.
+
+[6] [7]
+
+LaTeX Warning: Reference `fig:kappa_conv' on page 8 undefined on input line 346
+.
+
+[8]
+
+LaTeX Warning: Reference `fig:acf_decay' on page 9 undefined on input line 388.
+
+
+
+LaTeX Warning: Reference `fig:int_drift' on page 9 undefined on input line 390.
+
+
+
+Overfull \hbox (17.29025pt too wide) in paragraph at lines 390--391
+[]\OT1/cmr/m/n/12 (((ABOLISH THIS PARA-GRAPH? MOVE HOW-ELL COM-MENTS TO THE-ORY
+)))Figure
+ []
+
+
+LaTeX Warning: Reference `fig:664z_100ps' on page 9 undefined on input line 392
+.
+
+
+LaTeX Warning: Reference `fig:664z_10ps' on page 9 undefined on input line 392.
+
+
+[9]
+
+LaTeX Warning: Reference `fig:gk-direct' on page 10 undefined on input line 456
+.
+
+[10]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 475.
+
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 475.
+
+
+LaTeX Warning: Reference `fig:all_data' on page 11 undefined on input line 475.
+
+
+[11] [12] (./main.bbl
+Missing character: There is no Ì in font cmr10!
+Missing character: There is no ˆ in font cmr10!
+ [13])
+
+Class revtex4-1 Warning: Environment acknowledgements is obsolete;
+Use acknowledgments instead.
+
+[14] (./main.lof
+Missing character: There is no â in font cmr12!
+Missing character: There is no ‰ in font cmr12!
+Missing character: There is no ¤ in font cmr12!
+ [15]) [16] (./main.lof
+<images/ideal_extrap.png, id=68, 945.5325pt x 403.5075pt>
 File: images/ideal_extrap.png Graphic file (type png)
 
 <use images/ideal_extrap.png>
-Package pdftex.def Info: images/ideal_extrap.png used on input line 238.
+Package pdftex.def Info: images/ideal_extrap.png used on input line 3.
 (pdftex.def)             Requested size: 468.0pt x 199.72144pt.
- [5 <./images/ideal_extrap.png>]
-<images/gk_acf.png, id=34, 1220.30907pt x 514.17094pt>
+
+<images/gk_acf.png, id=70, 1220.30907pt x 514.17094pt>
 File: images/gk_acf.png Graphic file (type png)
  <use images/gk_acf.png>
-Package pdftex.def Info: images/gk_acf.png used on input line 280.
+Package pdftex.def Info: images/gk_acf.png used on input line 10.
 (pdftex.def)             Requested size: 468.0pt x 197.19148pt.
 
-[6] <images/gk_int.png, id=38, 1237.62375pt x 533.74406pt>
+<images/gk_int.png, id=71, 1237.62375pt x 533.74406pt>
 File: images/gk_int.png Graphic file (type png)
-
-<use images/gk_int.png>
-Package pdftex.def Info: images/gk_int.png used on input line 293.
+ <use images/gk_int.png>
+Package pdftex.def Info: images/gk_int.png used on input line 17.
 (pdftex.def)             Requested size: 468.0pt x 201.83124pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7 <./images/gk_acf.png>] [8 <./images/gk_int.png>] [9]
-<images/kappa_conv.png, id=52, 376.40625pt x 292.84406pt>
+<images/kappa_conv.png, id=72, 376.40625pt x 292.84406pt>
 File: images/kappa_conv.png Graphic file (type png)
 
 <use images/kappa_conv.png>
-Package pdftex.def Info: images/kappa_conv.png used on input line 350.
+Package pdftex.def Info: images/kappa_conv.png used on input line 24.
 (pdftex.def)             Requested size: 468.0pt x 364.13274pt.
- [10 <./images/kappa_conv.png (PNG copy)>] [11]
-<images/acf_decay_percent_correl.png, id=59, 380.92313pt x 289.83281pt>
+ [17 <./images/ideal_extrap.png> <./images/gk_acf.png>] <images/acf_decay_perce
+nt_correl.png, id=78, 380.92313pt x 289.83281pt>
 File: images/acf_decay_percent_correl.png Graphic file (type png)
 
 <use images/acf_decay_percent_correl.png>
 Package pdftex.def Info: images/acf_decay_percent_correl.png used on input line
- 404.
+ 31.
 (pdftex.def)             Requested size: 468.0pt x 356.09863pt.
-
-<images/4x4x3_01-z-ints.png, id=60, 1148.03906pt x 610.53094pt>
+ [18 <./images/gk_int.png>]
+<images/4x4x3_01-z-ints.png, id=83, 1148.03906pt x 610.53094pt>
 File: images/4x4x3_01-z-ints.png Graphic file (type png)
 
 <use images/4x4x3_01-z-ints.png>
-Package pdftex.def Info: images/4x4x3_01-z-ints.png used on input line 410.
+Package pdftex.def Info: images/4x4x3_01-z-ints.png used on input line 38.
 (pdftex.def)             Requested size: 468.0pt x 248.88464pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<images/6x6x4_01-z-stddev.png, id=61, 1147.28625pt x 608.2725pt>
+ [19 <./images/kappa_conv.png (PNG copy)>]
+<images/6x6x4_01-z-stddev.png, id=88, 1147.28625pt x 608.2725pt>
 File: images/6x6x4_01-z-stddev.png Graphic file (type png)
 
 <use images/6x6x4_01-z-stddev.png>
-Package pdftex.def Info: images/6x6x4_01-z-stddev.png used on input line 416.
+Package pdftex.def Info: images/6x6x4_01-z-stddev.png used on input line 45.
 (pdftex.def)             Requested size: 468.0pt x 248.12178pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<images/6x6x4_01-z-stddev_2-10ps.png, id=62, 1156.32pt x 611.28375pt>
+ [20 <./images/acf_decay_percent_correl.png (PNG copy)>]
+<images/6x6x4_01-z-stddev_2-10ps.png, id=92, 1156.32pt x 611.28375pt>
 File: images/6x6x4_01-z-stddev_2-10ps.png Graphic file (type png)
 
 <use images/6x6x4_01-z-stddev_2-10ps.png>
 Package pdftex.def Info: images/6x6x4_01-z-stddev_2-10ps.png used on input line
- 422.
+ 52.
 (pdftex.def)             Requested size: 468.0pt x 247.40067pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[12 <./images/acf_decay_percent_correl.png (PNG copy)>] [13 <./images/4x4x3_01-
-z-ints.png (PNG copy)> <./images/6x6x4_01-z-stddev.png (PNG copy)>]
-<images/gk_fse_draft.png, id=70, 542.77782pt x 463.7325pt>
+<images/gk_fse_draft.png, id=93, 542.77782pt x 463.7325pt>
 File: images/gk_fse_draft.png Graphic file (type png)
 
 <use images/gk_fse_draft.png>
-Package pdftex.def Info: images/gk_fse_draft.png used on input line 449.
+Package pdftex.def Info: images/gk_fse_draft.png used on input line 59.
 (pdftex.def)             Requested size: 468.0pt x 399.86356pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<images/gk-direct.png, id=71, 753.5653pt x 612.03656pt>
+ [21 <./images/4x4x3_01-z-ints.png (PNG copy)> <./images/6x6x4_01-z-stddev.png 
+(PNG copy)>]
+<images/gk-direct.png, id=97, 753.5653pt x 612.03656pt>
 File: images/gk-direct.png Graphic file (type png)
 
 <use images/gk-direct.png>
-Package pdftex.def Info: images/gk-direct.png used on input line 457.
+Package pdftex.def Info: images/gk-direct.png used on input line 66.
 (pdftex.def)             Requested size: 468.0pt x 380.10313pt.
 Missing character: There is no â in font cmr10!
 Missing character: There is no ‰ in font cmr10!
@@ -484,72 +498,50 @@ Missing character: There is no ¤ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no ‰ in font cmr10!
 Missing character: There is no ¤ in font cmr10!
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[14 <./images/6x6x4_01-z-stddev_2-10ps.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 473.
-
-
-(/apps/applications/texlive/2013/1/default/2013/texmf-dist/tex/latex/base/omlcm
-r.fd
-File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 473.
- <images/all_data.png, id=75, 995.21812pt x 520.94624pt>
+ [22 <./images/6x6x4_01-z-stddev_2-10ps.png (PNG copy)>] <images/all_data.png, 
+id=101, 995.21812pt x 520.94624pt>
 File: images/all_data.png Graphic file (type png)
 
 <use images/all_data.png>
-Package pdftex.def Info: images/all_data.png used on input line 476.
+Package pdftex.def Info: images/all_data.png used on input line 73.
 (pdftex.def)             Requested size: 468.0pt x 244.9799pt.
+ [23 <./images/gk_fse_draft.png>]) [24 <./images/gk-direct.png>] [25 <./images/
+all_data.png>] (./main.aux)
+
+LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
 
-[15 <./images/gk_fse_draft.png>] [16 <./images/gk-direct.png>] [17 <./images/al
-l_data.png>] (./main.bbl [18]
-Missing character: There is no Ì in font cmr10!
-Missing character: There is no ˆ in font cmr10!
- [19])
 
-Class revtex4-1 Warning: Environment acknowledgements is obsolete;
-Use acknowledgments instead.
-
-[20] (./main.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 4906 strings out of 493308
- 68183 string characters out of 6127609
- 142379 words of memory out of 5000000
- 8269 multiletter control sequences out of 15000+600000
+ 4996 strings out of 492995
+ 67231 string characters out of 6132705
+ 145864 words of memory out of 5000000
+ 8443 multiletter control sequences out of 15000+600000
  18017 words of font info for 66 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 38i,8n,30p,1091b,377s stack positions out of 5000i,500n,10000p,200000b,80000s
-</apps/applications/texlive/2013/1/default/2013/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmbx10.pfb></apps/applications/texlive/2013/1/def
-ault/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></apps/applicati
-ons/texlive/2013/1/default/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc
-10.pfb></apps/applications/texlive/2013/1/default/2013/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb></apps/applications/texlive/2013/1/default/2013/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></apps/applications/texlive/
-2013/1/default/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></apps/
-applications/texlive/2013/1/default/2013/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr10.pfb></apps/applications/texlive/2013/1/default/2013/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></apps/applications/texlive/2013/1/default/2
-013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></apps/applications/texl
-ive/2013/1/default/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></a
-pps/applications/texlive/2013/1/default/2013/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb></apps/applications/texlive/2013/1/default/2013/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb></apps/applications/texlive/2013/1/defa
-ult/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></apps/application
-s/texlive/2013/1/default/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
-pfb></apps/applications/texlive/2013/1/default/2013/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (20 pages, 683595 bytes).
+ 1141 hyphenation exceptions out of 8191
+ 39i,8n,30p,1091b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (25 pages, 681980 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 163 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

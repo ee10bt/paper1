@@ -53,7 +53,7 @@ nofootinbib,
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage[printfigures]{figcaps} % send figures to end
+\usepackage[printfigures]{figcaps} % send figures to end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -387,16 +387,16 @@ THIS INFO IN A TABLE, OR JUST GIVE FOR THE RELEVANT VOLUME?
 
 In this study we compute ACFs up to correlation lengths of 100~ps, with 1~fs timesteps. This length is longer than required but selected as a proof of concept to show convergence in the conductivity result, additionally to display the extent and behaviour of drift in the integrals for long correlation times. We show in Figure \ref{fig:acf_decay} that the magnitude of the ACF decays to much less than 1\% of its initial value around a correlation time of 1~ps, inferring the start of convergence for the integral and thus conductivity. (ACF FIGURE FOR CORREL < 10PS?, RUNNING AVERAGE SHOWS CONVERGENCE) 
 
-Figure \ref{fig:int_drift} shows drift in the integral at long correlation lengths. The ACF should decay to zero as correlation time tends to infinity, however noise in the ACF prevents this. This will ultimately cause the integral to diverge on long timescales. \citet{Howell2012} fits a series of exponential decays to their ACF, forcing the expected decay to zero and subsequent (constant) integral convergence. This is represents a significant improvement on the conductivity estimate at long correlation lengths, but is mostly similar with the un-fit integrals early in the correlation. (INTEGRAL DRIFT FIGURE, JUST THE ONE INTEGRAL FOR 100PS)
+(((ABOLISH THIS PARAGRAPH? MOVE HOWELL COMMENTS TO THEORY)))Figure \ref{fig:int_drift} shows drift in the integral at long correlation lengths. The ACF should decay to zero as correlation time tends to infinity, however noise in the ACF prevents this. This will ultimately cause the integral to diverge on long timescales. \citet{Howell2012} fits a series of exponential decays to their ACF, forcing the expected decay to zero and subsequent (constant) integral convergence. This is represents a significant improvement on the conductivity estimate at long correlation lengths, but is mostly similar with the un-fit integrals early in the correlation. (INTEGRAL DRIFT FIGURE, JUST THE ONE INTEGRAL FOR 100PS)
 
-ACFs produced by each simulation are integrated seperately, after which the integrals are averaged into a single series with uncertainty (standard deviation of the mean, \ref{fig:664z_100ps}). This process is performed for heat fluxes in each crystallographic direction, allowing analysis of anisotropy and finite system size effects. We obtain a conductivity value from the combined integral by averaging a window (somewhere) between correlation times of 2-10~ps. Windows are chosen to capture a flat, converged region of the integral, or the section just after the 'bottleneck' if convergence is not obvious (\ref{fig:664z_10ps}, but show window, and example of bottleneck?). We find correlation time of 2-10~ps to be long enough for good sampling of the integral, and short enough to ignore the aforementioned drift-effects. (INTEGRAL FIGURE WITH UNCERTAINTY FOR <10PS?, POINT TO CONVERGENCE, SHOW SMALL ZOOM OUT OF SAME GRAPH UP TO 100PS. SOME WAY TO COMBINE WITH ABOVE FIGURE)
-
-
+ACFs produced by each simulation are integrated seperately, after which the integrals are averaged into a single series with uncertainty (standard deviation of the mean, \ref{fig:664z_100ps}). This process is performed for heat fluxes in each crystallographic direction, allowing analysis of anisotropy and finite system size effects. We obtain a conductivity value from the combined integral by averaging a window between correlation times of 2-10~ps (for 136~GPa, 4000~K [THIS WILL NEED TO BE CHANGED]). Windows are chosen to capture a flat, converged region of the integral, or the section just after the 'bottleneck' if convergence is not obvious (\ref{fig:664z_10ps}, but show window, and example of bottleneck?). We find correlation time of 2-10~ps to be long enough for good sampling of the integral, and short enough to ignore the aforementioned drift-effects. (INTEGRAL FIGURE WITH UNCERTAINTY FOR <10PS?, POINT TO CONVERGENCE, SHOW SMALL ZOOM OUT OF SAME GRAPH UP TO 100PS. SOME WAY TO COMBINE WITH ABOVE FIGURE)
 
 
-%(SELLAN2010) Average over time and multiple simulations of different initial conditions. The total simulation time should be many times larger than the largest phonon relaxation times that dominate thermal conductivity, in order to accurately predict a converged value of the integral .
 
-CONVERGENCE OF KAPPA WITH SIMULATION TIME
+
+%(SELLAN2010) Average over time and multiple simulations of different initial conditions. The total simulation time should be many times larger than the largest phonon relaxation times that dominate thermal conductivity, in order to accurately predict a converged value of the integral.
+
+AAARRGH!!! - CONVERGENCE OF KAPPA WITH SIMULATION TIME - AAARRGH!!! 
 
 DONT NEED ALL THESE GRAPHS
 
@@ -441,9 +441,11 @@ DONT NEED ALL THESE GRAPHS
 
 \section{\label{sec:results}Results}
 
+LOTS OF QUANTIFYING
+
 \subsection{\label{sec:results.gk}Green-Kubo method}
 
-A supercell volume of 3x3x2 fails to reproduce conductivities on the same order as the larger cells for all directions. We identify 4x4x3 and larger cells as being converged with respect to cell volume. This a useful result in terms of computation efficiency, as 6x6x4 supercells are 3 times as large as 4x4x3. Whereas here our error bars represent statistics on the integrals, the errors we take on results from 4x4x3 cells going forward will be related to the variation with the larger cells.
+A supercell volume of 3x3x2 (((REFER TO GRAPH, WILL NEED 1000K TOO))) fails to reproduce conductivities on the same order as the larger cells for all directions. We identify 4x4x3 and larger cells as being converged with respect to cell volume (((PROBLEMATIC STATEMENT, NOT CONVINCING, BY WHAT METRIC?))). This a useful result in terms of computation efficiency, as 6x6x4 supercells are 3 times as large (VOLUMOUS? REFERENCE ATOM COUNT?) as 4x4x3. Whereas here our error bars represent statistics on the integrals, the errors we take on results from 4x4x3 cells going forward will be related to the variation with the larger cells ((THIS IS OBVIOUS NONSENSE, HAVE TO CHANGE)).
 
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{images/gk_fse_draft.png}
@@ -466,7 +468,7 @@ FINITE SIZE EFFECTS
 
 (((We consider FSE in the computed thermal conductivity at geophysically-relevant conditions of the CMB, but also consider the unphysical pressure/temperatures of 136~GPa and 1000~K.)))
 MFP DEPENDENT FSE, PROVE DIFFERENCE. 
-BUT HAVEN'T DONE GK FSE AT 1000K!
+BUT HAVEN'T DONE GK FSE AT 1000K! UPDATE - GK RUINS EVERYTHING
 
 In addition to the expected conductivity increase with cell length, we observe two effects of finite system size.
 
@@ -496,6 +498,8 @@ SCALING LAW / THEORETICAL MODEL
 
 YOU SHOULD DO YOUR FSE ANALYSIS AT LARGEST MFP CONDITION PAIR, HIGH P LOW T
 
+PREVIOUS WORK :(
+
 
 
 
@@ -519,7 +523,7 @@ For bridgmanite, we show that use of the direct method for calculation of therma
 
 
 
-(ASSUMING THE RESULTS ARE CORRECT AND AGREE WITH GK) We see the non-linear region as described by \citet{Sellan2010} for the cell length of 6 unit cells at 1000~K, which has individually higher conductivity than expected from the linear fit through data points corresponding to lengths of 8-16 unit cells. When included in the extrapolation, this reduces the gradient of the fit, raising the intercept and thus causing conductivity to be underestimated. At temperature of 4000~K, the 6 length cell is inline with the fit through cells with length less than 16 unit cells. As the ratio of cell length to phonon MFP increases with temperature, we believe the onset of divergence as described by Sellan et al. moves to the right (???). A shorter MFP needs a shorter cell length to display divergent conductivity, of which we have not sampled (at high temperature). DOING THE DIRECT METHOD WITH CELLS OF LENGTH LESS THAN 6 UNIT CELLS AT ANY TEMPERATURE IS A BAD IDEA BECAUSE ... 
+(ASSUMING THE RESULTS ARE CORRECT AND AGREE WITH GK) We see the non-linear region as described by \citet{Sellan2010} for the cell length of 6 unit cells at 1000~K, which has individually higher conductivity than expected from the linear fit through data points corresponding to lengths of 8-16 unit cells. When included in the extrapolation, this reduces the gradient of the fit, raising the intercept and thus causing conductivity to be underestimated. At temperature of 4000~K, the 6 length cell is inline with the fit through other cells with length less than 16 unit cells. As the ratio of cell length to phonon MFP increases with temperature, we believe the onset of divergence as described by Sellan et al. moves to the right (??? - MENTION ACTUAL EFFECT - QUANTIFY RATHER THAN REFERENCING GRAPH). A shorter MFP needs shorter cell lengths to display divergent conductivity, of which we have not sampled (at high temperature). DOING THE DIRECT METHOD WITH CELLS OF LENGTH LESS THAN 6 UNIT CELLS AT ANY TEMPERATURE IS A BAD IDEA BECAUSE ... 
 
 
 
