@@ -1,12 +1,5 @@
 \begin{figure}
 
-  \includegraphics[width=\linewidth]{images/ideal_extrap.png}
-  \caption{Idealised example of linear extrapolation procedure. Inverse computed conductivities are plotted against inverse simulation lengths. Extrapolation to y-axis gives conductivity of an infinite system length, i.e. the bulk material.}
-  \label{fig:ideal}
-
-\end{figure}
-\begin{figure}
-
   \includegraphics[width=\linewidth]{images/gk_acf.png}
   \caption{Normalised ACF. Correlation is taken over a longer length than shown on this plot (10 ps, see Figure 8 below), however the function decays to less than 1\% of its initial value at 2~ps. It continues to oscillate about zero, with a positive average value.}
   \label{fig:gk_acf}
@@ -21,15 +14,8 @@
 \end{figure}
 \begin{figure}
 
-  \includegraphics[width=\linewidth]{images/kappa_conv.png}
-  \caption{CAPTION}
-  \label{fig:kappa_conv}
-
-\end{figure}
-\begin{figure}
-
   \includegraphics[width=\linewidth]{images/acf_decay_percent_correl.png}
-  \caption{normalised acf in percent against 2ps correl}
+  \caption{normalised acf in percent against 2ps correl. 1 on y-axis = 1\%}
   \label{fig:acf_decay}
 
 \end{figure}
@@ -43,35 +29,56 @@
 \begin{figure}
 
   \includegraphics[width=\linewidth]{images/6x6x4_01-z-stddev.png}
-  \caption{kappa w/ uncertainty against 100ps correl}
+  \caption{kappa w/ uncertainty against 100ps correl. green series is all runs from each initial condition combined}
   \label{fig:664z_100ps}
 
 \end{figure}
 \begin{figure}
 
   \includegraphics[width=\linewidth]{images/6x6x4_01-z-stddev_2-10ps.png}
-  \caption{kappa w/ uncertainty against 10ps correl}
+  \caption{kappa w/ uncertainty against 10ps correl. shorter time scale than previous figure. flat region from 4-10ps. DON'T NEED ALL THESE GK FIGURES}
   \label{fig:664z_10ps}
 
 \end{figure}
 \begin{figure}
 
   \includegraphics[width=\linewidth]{images/gk_fse_draft.png}
-  \caption{kappa vs. volume, all directions}
+  \caption{kappa vs. volume, all directions. dashed lines show values at 4x4x3, the chosen volume, for comparison. change x-axis to atom count, or number of constituent cell?}
   \label{fig:gk_fse}
 
 \end{figure}
 \begin{figure}
 
-  \includegraphics[width=\linewidth]{images/gk-direct.png}
-  \caption{The results of Figure 9 for cross-section of 2x2 and lengths ≤ 16 unit cells. Diagrams of cell geometry are shown, with dimensions in unit cells and the number of atoms. Green-Kubo result is plotted on the y-axis for comparison with extrapolated direct method conductivity.}
-  \label{fig:gk-direct}
+  \includegraphics[width=\linewidth]{images/direct_length_graph_4000.png}
+  \caption{inverse conductivity against inverse length at 4000K. each series is a different CSA}
+  \label{fig:direct_length_graph_4000}
 
 \end{figure}
 \begin{figure}
 
-  \includegraphics[width=\linewidth]{images/all_data.png}
-  \caption{Compilation of direct method thermal conductivities across a range of cell shapes at 4000 K and static pressure of 136 GPa. Different cross-sections are displayed by the colour of the series, diagrams of which are shown in the legend (right). From right to left, data points correspond to lengths of 6, 8, 10, 12, 16, 24, and 48 unit cells. Inverted axes facilitate the extrapolation of conductivity to bulk material.}
-  \label{fig:all_data}
+  \includegraphics[width=\linewidth]{images/direct_length_graph_1000.png}
+  \caption{inverse conductivity against inverse length at 1000K. each series is a different CSA. COULD TRY AND COMBINE THESE FIGURES, SIMILAR Y-AXIS, MIGHT BE MESSY}
+  \label{fig:direct_length_graph_1000}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/direct_length_graph.png}
+  \caption{off-colour data points are not fit. Although the 1000~K data points look closer to the linear trend, they are further in magnitude due to the nature of the inverse y-axis.}
+  \label{fig:direct_length_graph}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/direct_length_table.png}
+  \caption{MAKE THIS INTO A LATEX TABLE OBVIOUSLY}
+  \label{fig:direct_length_table}
+
+\end{figure}
+\begin{figure}
+
+  \includegraphics[width=\linewidth]{images/gk-direct-2.png}
+  \caption{The results of Figure 9 for cross-section of 2x2 and lengths ≤ 16 unit cells. Diagrams of cell geometry are shown, with dimensions in unit cells and the number of atoms. Green-Kubo result is plotted on the y-axis for comparison with extrapolated direct method conductivity. WEIGHTED FIT DOESN'T LOOK LINEAR, INCREASE Y-AXIS RANGE?}
+  \label{fig:gk-direct}
 
 \end{figure}
