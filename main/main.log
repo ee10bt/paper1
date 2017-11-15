@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.28)  10 NOV 2017 15:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.28)  15 NOV 2017 15:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -392,14 +392,9 @@ msb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/apps/applications/texlive/2017/1/default/2017/texmf-var/fonts/map/pdftex/
 updmap/pdftex.map}]
-Overfull \hbox (25.1693pt too wide) in paragraph at lines 135--136
-[]\OT1/cmr/m/n/12 (MOVE) Many stud-ies as-sume low-er-most man-tle ther-mal con
--duc-tiv-ity to be 10 Wm$[]$K$[]$ (e.g.
- []
-
 Missing character: There is no Ì in font cmr12!
 Missing character: There is no ˆ in font cmr12!
-[2]
+ [2]
 Overfull \hbox (20.04456pt too wide) in paragraph at lines 166--168
 []\OT1/cmr/m/n/12 (WHY ELSE IS BRIDG IN-TER-EST-ING, OUT-SIDE OF EARTH AP-PLI-C
 A-TIONS)(BRIDG
@@ -407,56 +402,48 @@ A-TIONS)(BRIDG
 
 [3] [4] [5]
 
-LaTeX Warning: Reference `fig:gk_acf' on page 6 undefined on input line 297.
+LaTeX Warning: Reference `fig:gk_acf' on page 6 undefined on input line 294.
 
+[6]
 \tf@pof=\write4
 \openout4 = `main.lof'.
 
 
-LaTeX Warning: Reference `fig:gk_int' on page 6 undefined on input line 310.
 
-[6] [7] [8] [9]
+LaTeX Warning: Reference `fig:gk_int' on page 7 undefined on input line 307.
 
-LaTeX Warning: Reference `fig:acf_decay' on page 10 undefined on input line 423
+[7] [8] [9]
+
+LaTeX Warning: Reference `fig:acf_decay' on page 10 undefined on input line 417
 .
 
 
-LaTeX Warning: Reference `fig:int_drift' on page 10 undefined on input line 425
-.
+LaTeX Warning: Reference `fig:664z_100ps' on page 10 undefined on input line 41
+9.
 
 
-Overfull \hbox (17.29025pt too wide) in paragraph at lines 425--426
-[]\OT1/cmr/m/n/12 (((ABOLISH THIS PARA-GRAPH? MOVE HOW-ELL COM-MENTS TO THE-ORY
-)))Figure
- []
-
-
-LaTeX Warning: Reference `fig:664z_100ps' on page 10 undefined on input line 42
-7.
-
-
-LaTeX Warning: Reference `fig:664z_10ps' on page 10 undefined on input line 427
+LaTeX Warning: Reference `fig:664z_10ps' on page 10 undefined on input line 419
 .
 
 [10]
 
 LaTeX Warning: Reference `fig:direct_length_graph_4000' on page 11 undefined on
- input line 504.
+ input line 496.
 
 
 LaTeX Warning: Reference `fig:direct_length_graph_1000' on page 11 undefined on
- input line 504.
+ input line 496.
 
 [11]
 
 LaTeX Warning: Reference `fig:direct_length_graph' on page 12 undefined on inpu
-t line 518.
+t line 510.
 
 
-LaTeX Warning: Reference `fig:gk-direct' on page 12 undefined on input line 532
+LaTeX Warning: Reference `fig:gk-direct' on page 12 undefined on input line 524
 .
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 565.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 557.
 
 
 (/apps/applications/texlive/2017/1/default/2017/texmf-dist/tex/latex/base/omlcm
@@ -464,11 +451,11 @@ r.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 565.
- [12] [13] (./main.bbl
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 557.
+ [12] [13] (./main.bbl [14]
 Missing character: There is no Ì in font cmr10!
 Missing character: There is no ˆ in font cmr10!
- [14])
+)
 
 Class revtex4-1 Warning: Environment acknowledgements is obsolete;
 Use acknowledgments instead.
@@ -584,13 +571,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4956 strings out of 492990
- 69256 string characters out of 6121926
- 140801 words of memory out of 5000000
- 8407 multiletter control sequences out of 15000+600000
+ 4955 strings out of 492990
+ 69241 string characters out of 6121926
+ 139802 words of memory out of 5000000
+ 8406 multiletter control sequences out of 15000+600000
  18017 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,30p,1142b,346s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,30p,1142b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
 </apps/applications/texlive/2017/1/default/2017/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx10.pfb></apps/applications/texlive/2017/1/default/2017/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></apps/applications/texlive/2017/
@@ -611,7 +598,7 @@ st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></apps/applications/texlive/2017/1/
 default/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></apps/applic
 ations/texlive/2017/1/default/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti12.pfb>
-Output written on main.pdf (24 pages, 527558 bytes).
+Output written on main.pdf (24 pages, 527200 bytes).
 PDF statistics:
  156 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream
