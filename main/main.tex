@@ -287,7 +287,7 @@ At high kappa/high MFP/low T (my 1000~K), BPT must considered at the shorter cel
 
 
 
-\subsection{\label{sec:theory.gk}Green-Kubo method (remove this subsection header later)}
+\subsection{\label{sec:theory.gk}Green-Kubo method (remove this subsection header later)} % all in 2
 
 RETHINK FIGURES - WHICH DATA TO USE
 
@@ -331,20 +331,22 @@ The ACF should decay to zero as correlation time tends to infinity, however nois
 
 
 
-\section{\label{sec:methodology}Methodology}
+\section{\label{sec:methodology}Methodology} % all to C3?
 
 ENOUGH INFO FOR REPRODUCIBILITY !!!
 
 WHAT I HAVE DONE / FOR REPRODUCIBILITY. SETUP STUFF, BUT CONDUCTIVITY / FINITE SIZE EFFECT RESULTS GO IN RESULTS SECTION
 
 
-Using the classical molecular dynamics code LAMMPS(\citet{Plimpton1995}) (Large-scale Atomic/Molecular Massively Parallel Simulator), we calculate lattice thermal conductivities and constrain effects of finite simulation size. With the interatomic potential of \citet{Oganov2000} we simulate bridgmanite (MgSiO$_3$ perovskite), the predominant phase in the lower mantle ($\sim$75\%). 
+Using the classical molecular dynamics code LAMMPS(\citet{Plimpton1995}) (Large-scale Atomic/Molecular Massively Parallel Simulator), % 2
+we calculate lattice thermal conductivities and constrain effects of finite simulation size. With the interatomic potential of \citet{Oganov2000} we simulate bridgmanite (MgSiO$_3$ perovskite), %2
+the predominant phase in the lower mantle ($\sim$75\%). 
 
-To assess the finite-size effects within bridgmanite, we use larger simulation cells than those employed in previous studies (BRIDG STUDIES OR FSE STUDIES?). The atom counts associated with these cells (the largest cell considered having over 100,000 atoms) means an ab initio study would be impractical, necessitating the use of interatomic potentials. We expect the potentials to represent the finite size effects well, even if computed conductivities may inaccurate compared to first-principles calculations.
+To assess the finite-size effects within bridgmanite, we use larger simulation cells than those employed in previous studies (BRIDG STUDIES OR FSE STUDIES?). The atom counts associated with these cells (the largest cell considered having over 100,000 atoms) means an ab initio study would be impractical, necessitating the use of interatomic potentials. We expect the potentials to represent the finite size effects well, even if computed conductivities may inaccurate compared to first-principles calculations. %2
 
-WHY OGANOV? 
+WHY OGANOV? %2
 
-WHAT CUTOFFS?
+WHAT CUTOFFS? %2
 
 We present our approach for the direct and Green-Kubo methods, and show our calculations are converged with respect to simulation time (also temperature gradient and correlation length respectively - AWKWARD BRACKETS) [[[  DO SIMULATION TIME CONVERGENCE FOR GK TOO ]]]. The finite-size effect analysis for both methods can be found in Section.~\ref{sec:results}, along with a results comparison.
 
@@ -352,7 +354,7 @@ NPT-NVT-NVE PROCESS, BOTH METHODS
 
 BAROSTAT-THERMOSTAT-SIMULATION
 
-[[ THIS PARAGRAPH IS DUMB, I DON'T THINK IT NEEDS TO BE IN PAPER ]] We ensure all calculations are run for a sufficient length of time for the conductivity value to converge. When conductivity fails to converge it means either the simulations needs to be run for longer (unlikely with our nanosecond-scale classical calculations), or the system temperature has drifted. When NVE simulations are run for a long time there is noticable drift in the average system temperature (due to numerical approximations in the equation of motion), which in turn causes drift in the computed conductivity. 
+[[ THIS PARAGRAPH IS DUMB, I DON'T THINK IT NEEDS TO BE IN PAPER ]] We ensure all calculations are run for a sufficient length of time for the conductivity value to converge. When conductivity fails to converge it means either the simulations needs to be run for longer (unlikely with our nanosecond-scale classical calculations), or the system temperature has drifted. When NVE simulations are run for a long time there is noticable drift in the average system temperature (due to numerical approximations in the equation of motion), which in turn causes drift in the computed conductivity. %2
 
 
 
