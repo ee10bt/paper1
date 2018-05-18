@@ -348,9 +348,9 @@ WHY OGANOV? %2
 
 WHAT CUTOFFS? %2
 
-We present our approach for the direct and Green-Kubo methods, and show our calculations are converged with respect to simulation time (also temperature gradient and correlation length respectively - AWKWARD BRACKETS) [[[  DO SIMULATION TIME CONVERGENCE FOR GK TOO ]]]. The finite-size effect analysis for both methods can be found in Section.~\ref{sec:results}, along with a results comparison.
+We present our approach for the direct and Green-Kubo methods, and show our calculations are converged with respect to simulation time (also temperature gradient and correlation length respectively - AWKWARD BRACKETS) [[[  DO SIMULATION TIME CONVERGENCE FOR GK TOO ]]]. The finite-size effect analysis for both methods can be found in Section.~\ref{sec:results}, along with a results comparison.%3
 
-NPT-NVT-NVE PROCESS, BOTH METHODS
+NPT-NVT-NVE PROCESS, BOTH METHODS %3
 
 BAROSTAT-THERMOSTAT-SIMULATION
 
@@ -359,9 +359,10 @@ BAROSTAT-THERMOSTAT-SIMULATION
 
 
 
-\subsection{\label{sec:method.direct}Direct method}
+\subsection{\label{sec:method.direct}Direct method}%3
 
-The simulation supercell is split into sections along its length, each half a unit cell wide. Two of these sections, half the supercell length apart, are designated as the heat source and heat sink. We measure (HOW?) the temperature in all sections to obtain the temperature gradient. Heat flows in both directions from the hot section because of cell periodicity [NEED DIRECT METHOD DIAGRAM BY THIS PARA], meaning there are two temperature gradients to average. Where L is supercell length in unit cells and S (= 2L) gives the number of sections, we obtain S/2 + 1 temperature points to fit the gradient. Because the temperature gradient is non-linear around the heat source and sink, we ignore S/12 sections (rounded to nearest integer) from both ends of the temperature gradient. For a given simulation cell we fit S/3 + 1 points to obtain the temperature gradient. We use a minimum supercell length of 6 unit cells (12 sections, 5 data points), in order for sufficient fitting of the temperature gradient. [HOW NECESSARY IS THIS PARA, VERY JARGONY]
+The simulation supercell is split into sections along its length, each half a unit cell wide. 
+Two of these sections, half the supercell length apart, are designated as the heat source and heat sink. We measure (HOW?) the temperature in all sections to obtain the temperature gradient. Heat flows in both directions from the hot section because of cell periodicity [NEED DIRECT METHOD DIAGRAM BY THIS PARA], meaning there are two temperature gradients to average. Where L is supercell length in unit cells and S (= 2L) gives the number of sections, we obtain S/2 + 1 temperature points to fit the gradient. Because the temperature gradient is non-linear around the heat source and sink, we ignore S/12 sections (rounded to nearest integer) from both ends of the temperature gradient. For a given simulation cell we fit S/3 + 1 points to obtain the temperature gradient. We use a minimum supercell length of 6 unit cells (12 sections, 5 data points), in order for sufficient fitting of the temperature gradient. [HOW NECESSARY IS THIS PARA, VERY JARGONY]
 
 (MOVE TO RESULTS?) Changing the width of the heated sections has no effect on the conductivity result. Furthermore, changing the width (and thus number) of temperature bins has no effect on the sampled gradient, assuming resolution is large enough to capture the non-linear region around the heat source/sink.
 
@@ -380,12 +381,12 @@ We typically observe fluctuations in temperature of around $\pm$50~K during temp
 %  \label{fig:swap_int}
 %\end{figure}
 
-% NOT NEEDED
-%\begin{figure}[h!]
-%  \includegraphics[width=\linewidth]{images/kappa_conv.png}
-%  \caption{conductivity versus simulation time direct method. converged after 300ps. DO I NEED THIS FIGURE?}
-%  \label{fig:kappa_conv}
-%\end{figure}
+% Add this figure?
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{images/kappa_conv.png}
+  \caption{conductivity versus simulation time direct method. converged after 300ps. DO I NEED THIS FIGURE?}
+  \label{fig:kappa_conv}
+\end{figure}
 
 
 
@@ -404,7 +405,7 @@ We typically observe fluctuations in temperature of around $\pm$50~K during temp
 
 
 
-\subsection{\label{sec:method.gk}Green-Kubo method}
+\subsection{\label{sec:method.gk}Green-Kubo method}%3
 
 The bridgmanite unit cell does not have cell dimensions resembling a cube (a:b:c = 1:1:1.4), so we use supercell structures of 3x3x2, 4x4x3, 5x5x4, 6x6x4 etc. to make an approximately cubic simulation cell. Temperature initialisation (NVT) of 1~ns is run to ensure convergence of system pressure and temperature. To obtain heat flux auto-correlation functions, a simulation for each initial temperature condition is run for X~ns, with 9 successive repeats for a total of 10 jobs. This gives 10 ACFs from each initial condition. Simulation runs are split in this manner to be feasible computationally, and also to provide enough samples for ensemble averaging statistics (???).
 
@@ -475,7 +476,7 @@ DONT NEED ALL THESE GRAPHS
 
 
 
-\section{\label{sec:results}Results}
+\section{\label{sec:results}Results} %3
 
 LOTS OF QUANTIFYING
 
@@ -561,7 +562,7 @@ PREVIOUS WORK :(
 
 
 
-\section{\label{sec:summary}Summary and conclusion}
+\section{\label{sec:summary}Summary and conclusion} %3
 
 For bridgmanite (at conditions representing the lower mantle), we show that use of the direct method for calculation of thermal conductivity will lead to an overestimate if the simulation cell is too long (\textgreater 16 unit cells, 4000 ONLY!!!). Small cross-sectional areas (\textless 2x2 unit cells) also overestimate the thermal conductivity. This informs future work using Density Functional Theory, and will allow a model of lower mantle conductivity considering composition to be established [[[OOPS]]].
 
